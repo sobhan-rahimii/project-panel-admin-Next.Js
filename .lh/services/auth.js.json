@@ -1,0 +1,50 @@
+{
+    "sourceFile": "services/auth.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1756665295057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756665301764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n     return { error };\r\n   }\r\n };\r\n \r\n-export { rEgister ,  };\r\n+export { rEgister , login };\r\n"
+                },
+                {
+                    "date": 1756665392891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     return { error };\r\n   }\r\n };\r\n \r\n-const login = async (username, password) => {\r\n+const loginn = async (username, password) => {\r\n   try {\r\n     const response = await api.post(\"auth/login\", { username, password });\r\n     return { response };\r\n   } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756705438328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import api from \"./axios\";\r\n \r\n const rEgister = async (username, password,currentPassword) => {\r\n   try {\r\n-    const response = await api.post(\"auth/register\", { username, password });\r\n+    const response = await api.post(\"auth/register\", { username, password,cu });\r\n     return { response };\r\n   } catch (error) {\r\n     return { error };\r\n   }\r\n@@ -17,5 +17,5 @@\n     return { error };\r\n   }\r\n };\r\n \r\n-export { rEgister , login };\r\n+export { rEgister , loginn };\r\n"
+                },
+                {
+                    "date": 1756705639157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import api from \"./axios\";\r\n \r\n const rEgister = async (username, password,currentPassword) => {\r\n   try {\r\n-    const response = await api.post(\"auth/register\", { username, password,cu });\r\n+    const response = await api.post(\"auth/register\", { username, password });\r\n     return { response };\r\n   } catch (error) {\r\n     return { error };\r\n   }\r\n"
+                },
+                {
+                    "date": 1756706858916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const loginn = async (username, password) => {\r\n   try {\r\n     const response = await api.post(\"auth/login\", { username, password });\r\n-    return { response };\r\n+    return re;\r\n   } catch (error) {\r\n     return { error };\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1756707224237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const loginn = async (username, password) => {\r\n   try {\r\n     const response = await api.post(\"auth/login\", { username, password });\r\n-    return re;\r\n+    return \r\n   } catch (error) {\r\n     return { error };\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1756708407276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const loginn = async (username, password) => {\r\n   try {\r\n     const response = await api.post(\"auth/login\", { username, password });\r\n-    return \r\n+    return {response,da}\r\n   } catch (error) {\r\n     return { error };\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1756708413058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n \r\n const loginn = async (username, password) => {\r\n   try {\r\n     const response = await api.post(\"auth/login\", { username, password });\r\n-    return {response,da}\r\n+    return {response.data}\r\n   } catch (error) {\r\n     return { error };\r\n   }\r\n };\r\n"
+                }
+            ],
+            "date": 1756665295057,
+            "name": "Commit-0",
+            "content": "import api from \"./axios\";\r\n\r\nconst rEgister = async (username, password,currentPassword) => {\r\n  try {\r\n    const response = await api.post(\"auth/register\", { username, password });\r\n    return { response };\r\n  } catch (error) {\r\n    return { error };\r\n  }\r\n};\r\n\r\nconst login = async (username, password) => {\r\n  try {\r\n    const response = await api.post(\"auth/login\", { username, password });\r\n    return { response };\r\n  } catch (error) {\r\n    return { error };\r\n  }\r\n};\r\n\r\nexport { rEgister ,  };\r\n"
+        }
+    ]
+}

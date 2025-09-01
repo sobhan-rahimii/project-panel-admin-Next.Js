@@ -1,0 +1,38 @@
+{
+    "sourceFile": "styles/Login.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1756664847630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756664864512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     text-align: center;\r\n     color: rgba(40, 40, 40, 1);\r\n     margin-top: 62px;\r\n     /* margin-right: 610px;\r\n-    margin-left: 611px; */\r\n+    /* margin-left: 611px; */ */\r\n     white-space: nowrap;\r\n }\r\n .form{\r\n     border: 1px solid rgba(228, 228, 228, 1);\r\n"
+                },
+                {
+                    "date": 1756664872239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n     font-size: 31px;\r\n     text-align: center;\r\n     color: rgba(40, 40, 40, 1);\r\n     margin-top: 62px;\r\n-    /* margin-right: 610px;\r\n-    /* margin-left: 611px; */ */\r\n+     margin-right: 610px;\r\n+    margin-left: 611px; \r\n     white-space: nowrap;\r\n }\r\n .form{\r\n     border: 1px solid rgba(228, 228, 228, 1);\r\n"
+                },
+                {
+                    "date": 1756664879710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     font-size: 31px;\r\n     text-align: center;\r\n     color: rgba(40, 40, 40, 1);\r\n     margin-top: 62px;\r\n-     margin-right: 610px;\r\n+     /* margin-right: 610px; */\r\n     margin-left: 611px; \r\n     white-space: nowrap;\r\n }\r\n .form{\r\n"
+                },
+                {
+                    "date": 1756664923092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     text-align: center;\r\n     color: rgba(40, 40, 40, 1);\r\n     margin-top: 62px;\r\n      /* margin-right: 610px; */\r\n-    margin-left: 611px; \r\n+    /* margin-left: 611px;  */\r\n     white-space: nowrap;\r\n }\r\n .form{\r\n     border: 1px solid rgba(228, 228, 228, 1);\r\n"
+                },
+                {
+                    "date": 1756664932537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     font-size: 31px;\r\n     text-align: center;\r\n     color: rgba(40, 40, 40, 1);\r\n     margin-top: 62px;\r\n-     /* margin-right: 610px; */\r\n+     margin-right: 610px;\r\n     /* margin-left: 611px;  */\r\n     white-space: nowrap;\r\n }\r\n .form{\r\n"
+                }
+            ],
+            "date": 1756664847630,
+            "name": "Commit-0",
+            "content": ".matn{\r\n    width: 219px;\r\n    font-weight: 700;\r\n    font-size: 31px;\r\n    text-align: center;\r\n    color: rgba(40, 40, 40, 1);\r\n    margin-top: 62px;\r\n    /* margin-right: 610px;\r\n    margin-left: 611px; */\r\n    white-space: nowrap;\r\n}\r\n.form{\r\n    border: 1px solid rgba(228, 228, 228, 1);\r\n    background-color: rgba(255, 255, 255, 1);\r\n    margin-right: 485px;\r\n    margin-left: 485px;\r\n    margin-top: 154px;\r\n    margin-bottom: 250px;\r\n    width: 470px;\r\n    height: 523px;\r\n    border-radius: 40px;\r\n\r\n}\r\n.flex{\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n.photo{\r\n    margin-right: 195px;\r\n    margin-left: 195px;\r\n    margin-top: 51px;\r\n    margin-bottom: 16.53px;\r\n\r\n}\r\n.title{\r\n    width: 82px;\r\n    margin-right: 179px;\r\n    margin-left: 209px;\r\n    /* margin-top: 16.53px; */\r\n    text-align: right;\r\n    font-weight: 500;\r\n    font-size: 24px;\r\n\r\n}\r\n.inputs{\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n}\r\n.input1{\r\n    width: 400px;\r\n    height: 53px;\r\n    border: none;\r\n    border-radius: 15px;\r\n    background-color: rgba(242, 242, 242, 1);\r\n    margin-top: 63px;\r\n    margin-right: 35px;\r\n    margin-left: 35px;\r\n\r\n}\r\n.input1::placeholder{\r\n    padding-top: 14px;\r\n    padding-bottom: 14px;\r\n    padding-right: 14px;\r\n    padding-left: 323px;\r\n    width: 62px;\r\n    font-weight: 400;\r\n    font-size: 16px;\r\n    text-align: right;\r\n    color: rgba(40, 40, 40, 0.5);\r\n}\r\n.input2{\r\n    width: 400px;\r\n    height: 53px;\r\n    border: none;\r\n    border-radius: 15px;\r\n    background-color: rgba(242, 242, 242, 1);\r\n    margin-right: 35px;\r\n    margin-left: 35px;\r\n    margin-top: 16px;\r\n}\r\n.input2::placeholder{\r\n    padding-top: 14px;\r\n    padding-bottom: 14px;\r\n    padding-right: 14px;\r\n    padding-left: 335px;\r\n    width: 50px;\r\n    color: rgba(40, 40, 40, 0.5);\r\n    text-align: right;\r\n    font-size: 16px;\r\n    font-weight: 400;\r\n}\r\n.login{\r\n    width: 400px;\r\n    height: 53px;\r\n    border-radius: 15px;\r\n    background-color: rgba(85, 163, 240, 1);\r\n    color: rgba(255, 255, 255, 1);\r\n    font-weight: 600;\r\n    font-style: 20px;\r\n    text-align: center;\r\n    margin-right: 38px;\r\n    margin-left: 32px;\r\n    margin-top: 35px;\r\n    padding-top: 11px;\r\n    padding-bottom: 11px;\r\n    padding-right: 182px;\r\n    padding-left: 182px;\r\n    border: none;\r\n    cursor: pointer;\r\n}\r\n.createaccount{\r\n    width: 126px;\r\n    font-weight: 400;\r\n    font-size: 16px;\r\n    text-align: right;\r\n    color: rgba(58, 139, 237, 1);\r\n    margin-top: 16px;\r\n    margin-right: 42px;\r\n    margin-bottom: 19px;\r\n    margin-left: 302px;\r\n    text-decoration: none;\r\n}\r\n.error_username{\r\n    color: red;\r\n    text-align: center;\r\n    margin-top: 10px;\r\n    border: 1px solid red;\r\n}\r\n.errpassword{\r\n    color: red;\r\n    text-align: center;\r\n    border: 1px solid red;\r\n    margin-top: 10px;\r\n}"
+        }
+    ]
+}

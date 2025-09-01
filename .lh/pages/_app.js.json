@@ -1,0 +1,90 @@
+{
+    "sourceFile": "pages/_app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1756712091514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756712097076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import \"@/styles/globals.css\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n \r\n+  const query\r\n \r\n-  \r\n   return <Component {...pageProps} />;\r\n }\r\n"
+                },
+                {
+                    "date": 1756712104389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import \"@/styles/globals.css\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n \r\n-  const query\r\n+  const queryclient = use\r\n \r\n   return <Component {...pageProps} />;\r\n }\r\n"
+                },
+                {
+                    "date": 1756712110924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import \"@/styles/globals.css\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n \r\n-  const queryclient = use\r\n+  const queryclient = useQu\r\n \r\n   return <Component {...pageProps} />;\r\n }\r\n"
+                },
+                {
+                    "date": 1756712118843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import \"@/styles/globals.css\";\r\n+import { useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n \r\n-  const queryclient = useQu\r\n+  const queryclient = useQueryClient\r\n \r\n   return <Component {...pageProps} />;\r\n }\r\n"
+                },
+                {
+                    "date": 1756712132748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n import { useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n \r\n-  const queryclient = useQueryClient\r\n+  const queryclient = useQueryClient()\r\n \r\n-  return <Component {...pageProps} />;\r\n+\r\n+  return() <Component {...pageProps} />;\r\n }\r\n"
+                },
+                {
+                    "date": 1756712140899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n \r\n   const queryclient = useQueryClient()\r\n \r\n \r\n-  return() <Component {...pageProps} />;\r\n+  return(\r\n+     <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712146918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n \r\n   const queryclient = useQueryClient()\r\n \r\n \r\n-  return(\r\n+  return( use\r\n      <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712156275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n \r\n   const queryclient = useQueryClient()\r\n \r\n \r\n-  return( use\r\n+  return( useQueryP\r\n      <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712164834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n \r\n   const queryclient = useQueryClient()\r\n \r\n \r\n-  return( useQueryP\r\n+  return( qu\r\n      <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712171962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import \"@/styles/globals.css\";\r\n-import { useQueryClient } from \"@tanstack/react-query\";\r\n+import { QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n \r\n   const queryclient = useQueryClient()\r\n \r\n \r\n-  return( qu\r\n+  return( QueryClientProvider\r\n      <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712180247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,9 @@\n \r\n   const queryclient = useQueryClient()\r\n \r\n \r\n-  return( QueryClientProvider\r\n+  return( <QueryClientProvider>\r\n+    \r\n+  </QueryClientProvider>\r\n      <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712187658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   const queryclient = useQueryClient()\r\n \r\n \r\n   return( <QueryClientProvider>\r\n-    \r\n+\r\n+    <Component {...pageProps} />\r\n+    );\r\n   </QueryClientProvider>\r\n-     <Component {...pageProps} />);\r\n }\r\n"
+                },
+                {
+                    "date": 1756712197151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,12 @@\n import \"@/styles/globals.css\";\r\n import { QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n+  const queryclient = useQueryClient();\r\n \r\n-  const queryclient = useQueryClient()\r\n-\r\n-\r\n-  return( <QueryClientProvider>\r\n-\r\n-    <Component {...pageProps} />\r\n-    );\r\n-  </QueryClientProvider>\r\n+  return (\r\n+    <QueryClientProvider client={} >\r\n+      <Component {...pageProps} />\r\n+    </QueryClientProvider>\r\n+  );\r\n }\r\n"
+                },
+                {
+                    "date": 1756712202792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n export default function App({ Component, pageProps }) {\r\n   const queryclient = useQueryClient();\r\n \r\n   return (\r\n-    <QueryClientProvider client={} >\r\n+    <QueryClientProvider client={que} >\r\n       <Component {...pageProps} />\r\n     </QueryClientProvider>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756712489477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import \"@/styles/globals.css\";\r\n import { QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n-  const queryclient = useQueryClient();\r\n+  const queryclient =  new QueryClient();\r\n \r\n   return (\r\n-    <QueryClientProvider client={que} >\r\n+    <QueryClientProvider client={queryclient} >\r\n       <Component {...pageProps} />\r\n     </QueryClientProvider>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756712497063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import \"@/styles/globals.css\";\r\n import { QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n-  const queryclient =  new QueryClient();\r\n+  const queryclient =  new\r\n \r\n   return (\r\n     <QueryClientProvider client={queryclient} >\r\n       <Component {...pageProps} />\r\n"
+                },
+                {
+                    "date": 1756712502374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import \"@/styles/globals.css\";\r\n import { QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n-  const queryclient =  new\r\n+  const queryclient =  new que\r\n \r\n   return (\r\n     <QueryClientProvider client={queryclient} >\r\n       <Component {...pageProps} />\r\n"
+                },
+                {
+                    "date": 1756712511336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import \"@/styles/globals.css\";\r\n-import { QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n+import { QueryClient, QueryClientProvider, useQueryClient } from \"@tanstack/react-query\";\r\n \r\n export default function App({ Component, pageProps }) {\r\n-  const queryclient =  new que\r\n+  const queryclient =  new QueryClient()\r\n \r\n   return (\r\n     <QueryClientProvider client={queryclient} >\r\n       <Component {...pageProps} />\r\n"
+                }
+            ],
+            "date": 1756712091514,
+            "name": "Commit-0",
+            "content": "import \"@/styles/globals.css\";\r\n\r\nexport default function App({ Component, pageProps }) {\r\n\r\n\r\n  \r\n  return <Component {...pageProps} />;\r\n}\r\n"
+        }
+    ]
+}

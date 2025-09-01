@@ -1,0 +1,158 @@
+.form {
+  width: 460px;
+  height: 596px;
+  border-radius: 40px;
+  border: 1px solid rgba(228, 228, 228, 1);
+  margin-right: 495px;
+  margin-left: 495px;
+  margin-top: 214px;
+  margin-bottom: 214px;
+}
+.img_title {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  margin-right: 185px;
+  margin-top: 51px;
+  margin-left: 195px;
+  margin-bottom: 16.53;
+}
+.title {
+  width: 112px;
+  margin-right: 169px;
+  margin-left: 179px;
+  margin-top: 16.53px;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: right;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.input1 {
+  width: 400px;
+  height: 53px;
+  border-radius: 15px;
+  gap: 10px;
+  background-color: rgba(242, 242, 242, 1);
+  margin-top: 63px;
+  margin-right: 25px;
+  margin-left: 35px;
+  margin-bottom: 16px;
+  border: none;
+
+}
+
+.input2 {
+  width: 400px;
+  height: 53px;
+  border-radius: 15px;
+  gap: 10px;
+  background-color: rgba(242, 242, 242, 1);
+  margin-top: 16px;
+  margin-right: 25px;
+  margin-left: 35px;
+  margin-bottom: 16px;
+  border: none;
+
+}
+.input3 {
+  width: 400px;
+  height: 53px;
+  border-radius: 15px;
+  gap: 10px;
+  background-color: rgba(242, 242, 242, 1);
+  margin-top: 16px;
+  margin-right: 25px;
+  margin-left: 35px;
+  margin-bottom: 35px;
+  border: none;
+}
+.btn {
+  width: 400px;
+  height: 53px;
+  border-radius: 15px;
+  margin-right: 25px;
+  margin-left: 35px;
+  /* margin-bottom: 64px; */
+  background-color: rgba(85, 163, 240, 1);
+  color: rgba(255, 255, 255, 1);
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 169.5px;
+  padding-left: 169.5px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.input1::placeholder{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    padding-left: 323px;
+    width: 62px;
+    color: rgba(40, 40, 40, 0.5);
+    text-align: right;
+    font-weight: 400;
+    font-size: 16px;
+}
+.input2::placeholder{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    padding-left: 335px;
+    color: rgba(40, 40, 40, 0.5);
+    text-align: right;
+    font-weight: 400;
+    font-size: 16px;
+    width: 50px;
+}
+.input3::placeholder{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    padding-left: 303px;
+    color: rgba(40, 40, 40, 0.5);
+    text-align: right;
+    font-weight: 400;
+    font-size: 16px;
+    width: 82px;
+
+}
+.account{
+    text-decoration: none;
+    margin-top: 19px;
+    margin-right: 28px;
+    margin-left: 305px;
+    margin-bottom: 20px;
+    color: rgba(58, 139, 237, 1);
+    width: 127px;
+    font-weight: 400;
+    text-align: right;
+    font-size: 16px;
+    
+    
+}
+
+.title1{
+    text-align: center;
+    height: 219px;
+    margin-top: 62px;
+    font-size: 31px;
+    font-weight: 700;
+    color: rgba(40, 40, 40, 1);
+
+}
+/* .username_error{
+    color: red;
+    width: 300px;
+    /* height: 40px; */
+    font-size: 15px;
+    
+} */

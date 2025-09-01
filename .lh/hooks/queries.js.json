@@ -1,0 +1,222 @@
+{
+    "sourceFile": "hooks/queries.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 51,
+            "patches": [
+                {
+                    "date": 1756647512980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756647522922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import api from \"@/services/axios\"\r\n \r\n \r\n \r\n-\r\n+const use\r\n"
+                },
+                {
+                    "date": 1756647530769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n import api from \"@/services/axios\"\r\n \r\n \r\n \r\n-const use\r\n+const useFetchProducts = ()\r\n"
+                },
+                {
+                    "date": 1756647538812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n import api from \"@/services/axios\"\r\n \r\n \r\n \r\n-const useFetchProducts = ()\r\n+const useFetchProducts = ()=>{\r\n+    const fe\r\n+}\r\n"
+                },
+                {
+                    "date": 1756647547238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n \r\n \r\n const useFetchProducts = ()=>{\r\n-    const fe\r\n+    const fetchProducts = \r\n }\r\n"
+                },
+                {
+                    "date": 1756647553241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n \r\n \r\n const useFetchProducts = ()=>{\r\n-    const fetchProducts = \r\n+    const fetchProducts = async()\r\n }\r\n"
+                },
+                {
+                    "date": 1756647563481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,8 @@\n \r\n \r\n \r\n const useFetchProducts = ()=>{\r\n-    const fetchProducts = async()\r\n+    const fetchProducts = async()=>{\r\n+        const res = \r\n+    }\r\n }\r\n"
+                },
+                {
+                    "date": 1756647570623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n \r\n \r\n const useFetchProducts = ()=>{\r\n     const fetchProducts = async()=>{\r\n-        const res = \r\n+        const res = await api.apply\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1756647582811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n \r\n \r\n const useFetchProducts = ()=>{\r\n     const fetchProducts = async()=>{\r\n-        const res = await api.apply\r\n+        const res = await api.get(\"products\")\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1756647593846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n \r\n const useFetchProducts = ()=>{\r\n     const fetchProducts = async()=>{\r\n         const res = await api.get(\"products\")\r\n+        \r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1756647602669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n \r\n const useFetchProducts = ()=>{\r\n     const fetchProducts = async()=>{\r\n         const res = await api.get(\"products\")\r\n-        \r\n+        return res.data\r\n     }\r\n }\r\n"
+                },
+                {
+                    "date": 1756647608154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,6 @@\n     const fetchProducts = async()=>{\r\n         const res = await api.get(\"products\")\r\n         return res.data\r\n     }\r\n+    return\r\n }\r\n"
+                },
+                {
+                    "date": 1756647615198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import api from \"@/services/axios\"\r\n+import { useQuery } from \"@tanstack/react-query\"\r\n+\r\n+\r\n+\r\n+const useFetchProducts = ()=>{\r\n+    const fetchProducts = async()=>{\r\n+        const res = await api.get(\"products\")\r\n+        return res.data\r\n+    }\r\n+    return useQuery([])\r\n+}\r\n"
+                },
+                {
+                    "date": 1756647626932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,6 @@\n     const fetchProducts = async()=>{\r\n         const res = await api.get(\"products\")\r\n         return res.data\r\n     }\r\n-    return useQuery([])\r\n+    return useQuery([\"products\"],fetchProducts)\r\n }\r\n-import api from \"@/services/axios\"\r\n-\r\n-\r\n-\r\n-const useFetchProducts = ()=>{\r\n-    const fetchProducts = async()=>{\r\n-        const res = await api.get(\"products\")\r\n-        return res.data\r\n-    }\r\n-    return\r\n-}\r\n"
+                },
+                {
+                    "date": 1756647635514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     const fetchProducts = async()=>{\r\n         const res = await api.get(\"products\")\r\n         return res.data\r\n     }\r\n-    return useQuery([\"products\"],fetchProducts)\r\n+    return useQuery([\"products\"],fetchProducts, {re})\r\n }\r\n"
+                },
+                {
+                    "date": 1756647642749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,6 @@\n     const fetchProducts = async()=>{\r\n         const res = await api.get(\"products\")\r\n         return res.data\r\n     }\r\n-    return useQuery([\"products\"],fetchProducts, {re})\r\n+    return useQuery([\"products\"],fetchProducts, {refetchInterval:1*1000})\r\n }\r\n"
+                },
+                {
+                    "date": 1756647661358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,7 @@\n         return res.data\r\n     }\r\n     return useQuery([\"products\"],fetchProducts, {refetchInterval:1*1000})\r\n }\r\n+\r\n+\r\n+const useAddProducts\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647668105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,5 +11,7 @@\n     return useQuery([\"products\"],fetchProducts, {refetchInterval:1*1000})\r\n }\r\n \r\n \r\n-const useAddProducts\n\\ No newline at end of file\n+const useAddProducts = ()=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647676083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n }\r\n \r\n \r\n const useAddProducts = ()=>{\r\n-    \r\n+    const addProducts\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647682211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n }\r\n \r\n \r\n const useAddProducts = ()=>{\r\n-    const addProducts\r\n+    const addProduct = as\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647687404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,8 @@\n }\r\n \r\n \r\n const useAddProducts = ()=>{\r\n-    const addProduct = as\r\n+    const addProduct = async()=>{\r\n+        \r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647694183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,8 @@\n }\r\n \r\n \r\n const useAddProducts = ()=>{\r\n-    const addProduct = async()=>{\r\n-        \r\n+    const addProduct = async(new)=>{\r\n+\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647700389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n }\r\n \r\n \r\n const useAddProducts = ()=>{\r\n-    const addProduct = async(new)=>{\r\n+    const addProduct = async(newProduct)=>{\r\n+        \r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647706065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n \r\n \r\n const useAddProducts = ()=>{\r\n     const addProduct = async(newProduct)=>{\r\n-        \r\n+        cons\r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647712753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n \r\n \r\n const useAddProducts = ()=>{\r\n     const addProduct = async(newProduct)=>{\r\n-        cons\r\n+        const res = await api\r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647722750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n \r\n \r\n const useAddProducts = ()=>{\r\n     const addProduct = async(newProduct)=>{\r\n-        const res = await api\r\n+        const res = await api.post(\"pro\")\r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647728588,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n \r\n \r\n const useAddProducts = ()=>{\r\n     const addProduct = async(newProduct)=>{\r\n-        const res = await api.post(\"pro\")\r\n+        const res = await api.post(\"products\",newProduct)\r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647737086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,8 @@\n \r\n const useAddProducts = ()=>{\r\n     const addProduct = async(newProduct)=>{\r\n         const res = await api.post(\"products\",newProduct)\r\n+        re\r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647742727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n \r\n const useAddProducts = ()=>{\r\n     const addProduct = async(newProduct)=>{\r\n         const res = await api.post(\"products\",newProduct)\r\n-        re\r\n+        return res.data\r\n \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647749532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,8 @@\n     const addProduct = async(newProduct)=>{\r\n         const res = await api.post(\"products\",newProduct)\r\n         return res.data\r\n \r\n+\r\n     }\r\n+    re\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647757169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n         return res.data\r\n \r\n \r\n     }\r\n-    re\r\n+    return usemu\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647765681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import api from \"@/services/axios\"\r\n-import { useQuery } from \"@tanstack/react-query\"\r\n+import { useMutation, useQuery } from \"@tanstack/react-query\"\r\n \r\n \r\n \r\n const useFetchProducts = ()=>{\r\n@@ -18,6 +18,6 @@\n         return res.data\r\n \r\n \r\n     }\r\n-    return usemu\r\n+    return useMutation(addProduct)\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647779447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,20 @@\n-import api from \"@/services/axios\"\r\n-import { useMutation, useQuery } from \"@tanstack/react-query\"\r\n+import api from \"@/services/axios\";\r\n+import { useMutation, useQuery } from \"@tanstack/react-query\";\r\n \r\n+const useFetchProducts = () => {\r\n+  const fetchProducts = async () => {\r\n+    const res = await api.get(\"products\");\r\n+    return res.data;\r\n+  };\r\n+  return useQuery([\"products\"], fetchProducts, { refetchInterval: 1 * 1000 });\r\n+};\r\n \r\n+const useAddProducts = () => {\r\n+  const addProduct = async (newProduct) => {\r\n+    const res = await api.post(\"products\", newProduct);\r\n+    return res.data;\r\n+  };\r\n+  return useMutation(addProduct);\r\n+};\r\n \r\n-const useFetchProducts = ()=>{\r\n-    const fetchProducts = async()=>{\r\n\\ No newline at end of file\n-        const res = await api.get(\"products\")\r\n-        return res.data\r\n-    }\r\n-    return useQuery([\"products\"],fetchProducts, {refetchInterval:1*1000})\r\n-}\r\n-\r\n-\r\n-const useAddProducts = ()=>{\r\n-    const addProduct = async(newProduct)=>{\r\n-        const res = await api.post(\"products\",newProduct)\r\n-        return res.data\r\n-\r\n-\r\n-    }\r\n-    return useMutation(addProduct)\r\n-}\n+const useSE\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647788980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,7 @@\n   };\r\n   return useMutation(addProduct);\r\n };\r\n \r\n-const useSE\n\\ No newline at end of file\n+const useSearchProducts = ()=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647795160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n   };\r\n   return useMutation(addProduct);\r\n };\r\n \r\n-const useSearchProducts = ()=>{\r\n-    \r\n+const useSearchProducts = (name)=>{\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647802769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,7 @@\n   return useMutation(addProduct);\r\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n+    const fet\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647808165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n   return useMutation(addProduct);\r\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n-    const fet\r\n+    const fetchSear\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647814236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n   return useMutation(addProduct);\r\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n-    const fetchSear\r\n+    const fetchSearchProducts = \r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647819585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n   return useMutation(addProduct);\r\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n-    const fetchSearchProducts = \r\n+    const fetchSearchProducts = ()\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647830006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,9 @@\n   return useMutation(addProduct);\r\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n-    const fetchSearchProducts = ()\r\n+    const fetchSearchProducts = async()=>{\r\n+        const res\r\n+    }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647837634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n     const fetchSearchProducts = async()=>{\r\n-        const res\r\n+        const res = await api.\r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647847140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n     const fetchSearchProducts = async()=>{\r\n-        const res = await api.\r\n+        const res = await api.get(`products`)\r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647854971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,8 @@\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n     const fetchSearchProducts = async()=>{\r\n-        const res = await api.get(`products`)\r\n+        const res = await api.get(`products?name`)\r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647864200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n };\r\n \r\n const useSearchProducts = (name)=>{\r\n     const fetchSearchProducts = async()=>{\r\n-        const res = await api.get(`products?name`)\r\n+        const res = await api.get(`products?name=${name}`)\r\n+        \r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647869445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,8 @@\n \r\n const useSearchProducts = (name)=>{\r\n     const fetchSearchProducts = async()=>{\r\n         const res = await api.get(`products?name=${name}`)\r\n-        \r\n+        return re\r\n     }\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647876598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n \r\n const useSearchProducts = (name)=>{\r\n     const fetchSearchProducts = async()=>{\r\n         const res = await api.get(`products?name=${name}`)\r\n-        return re\r\n+        return res.data\r\n     }\r\n+    re\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647882965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     const fetchSearchProducts = async()=>{\r\n         const res = await api.get(`products?name=${name}`)\r\n         return res.data\r\n     }\r\n-    re\r\n+    return useQuery([])\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647889371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     const fetchSearchProducts = async()=>{\r\n         const res = await api.get(`products?name=${name}`)\r\n         return res.data\r\n     }\r\n-    return useQuery([])\r\n+    return useQuery([\"products\",])\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647898039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n     const fetchSearchProducts = async()=>{\r\n         const res = await api.get(`products?name=${name}`)\r\n         return res.data\r\n     }\r\n-    return useQuery([\"products\",])\r\n+    return useQuery([\"products\",name],fet)\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647909155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,9 @@\n     const fetchSearchProducts = async()=>{\r\n         const res = await api.get(`products?name=${name}`)\r\n         return res.data\r\n     }\r\n-    return useQuery([\"products\",name],fet)\r\n+    return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n\\ No newline at end of file\n-}\n+}\r\n+\r\n+export\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647914732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n \r\n-export\n\\ No newline at end of file\n+export {use}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756647922214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n \r\n-export {use}\n\\ No newline at end of file\n+export {useFetchProducts,useAddProducts,use}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1756647512980,
+            "name": "Commit-0",
+            "content": "import api from \"@/services/axios\"\r\n\r\n\r\n\r\n\r\n"
+        }
+    ]
+}

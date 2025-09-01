@@ -1,0 +1,26 @@
+{
+    "sourceFile": "styles/Register.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1756648463516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756648468835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n   margin-top: 214px;\r\n   margin-bottom: 214px;\r\n }\r\n .img_title {\r\n-  \r\n+  display: flex;\r\n+  flex-direction: column;\r\n }\r\n .img {\r\n   margin-right: 185px;\r\n   margin-top: 51px;\r\n"
+                },
+                {
+                    "date": 1756648492805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,11 +148,11 @@\n     font-weight: 700;\r\n     color: rgba(40, 40, 40, 1);\r\n \r\n }\r\n-.username_error{\r\n+/* .username_error{\r\n     color: red;\r\n     width: 300px;\r\n     /* height: 40px; */\r\n     font-size: 15px;\r\n     \r\n\\ No newline at end of file\n-}\n+} */\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1756648463516,
+            "name": "Commit-0",
+            "content": ".form {\r\n  width: 460px;\r\n  height: 596px;\r\n  border-radius: 40px;\r\n  border: 1px solid rgba(228, 228, 228, 1);\r\n  margin-right: 495px;\r\n  margin-left: 495px;\r\n  margin-top: 214px;\r\n  margin-bottom: 214px;\r\n}\r\n.img_title {\r\n  \r\n}\r\n.img {\r\n  margin-right: 185px;\r\n  margin-top: 51px;\r\n  margin-left: 195px;\r\n  margin-bottom: 16.53;\r\n}\r\n.title {\r\n  width: 112px;\r\n  margin-right: 169px;\r\n  margin-left: 179px;\r\n  margin-top: 16.53px;\r\n  font-weight: 500;\r\n  font-size: 24px;\r\n  text-align: right;\r\n}\r\n\r\n.inputs {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.input1 {\r\n  width: 400px;\r\n  height: 53px;\r\n  border-radius: 15px;\r\n  gap: 10px;\r\n  background-color: rgba(242, 242, 242, 1);\r\n  margin-top: 63px;\r\n  margin-right: 25px;\r\n  margin-left: 35px;\r\n  margin-bottom: 16px;\r\n  border: none;\r\n\r\n}\r\n\r\n.input2 {\r\n  width: 400px;\r\n  height: 53px;\r\n  border-radius: 15px;\r\n  gap: 10px;\r\n  background-color: rgba(242, 242, 242, 1);\r\n  margin-top: 16px;\r\n  margin-right: 25px;\r\n  margin-left: 35px;\r\n  margin-bottom: 16px;\r\n  border: none;\r\n\r\n}\r\n.input3 {\r\n  width: 400px;\r\n  height: 53px;\r\n  border-radius: 15px;\r\n  gap: 10px;\r\n  background-color: rgba(242, 242, 242, 1);\r\n  margin-top: 16px;\r\n  margin-right: 25px;\r\n  margin-left: 35px;\r\n  margin-bottom: 35px;\r\n  border: none;\r\n}\r\n.btn {\r\n  width: 400px;\r\n  height: 53px;\r\n  border-radius: 15px;\r\n  margin-right: 25px;\r\n  margin-left: 35px;\r\n  /* margin-bottom: 64px; */\r\n  background-color: rgba(85, 163, 240, 1);\r\n  color: rgba(255, 255, 255, 1);\r\n  padding-top: 11px;\r\n  padding-bottom: 11px;\r\n  padding-right: 169.5px;\r\n  padding-left: 169.5px;\r\n  border: none;\r\n  text-decoration: none;\r\n  font-weight: 600;\r\n  font-size: 20px;\r\n  text-align: center;\r\n}\r\n.input1::placeholder{\r\n    padding-top: 14px;\r\n    padding-bottom: 14px;\r\n    padding-right: 14px;\r\n    padding-left: 323px;\r\n    width: 62px;\r\n    color: rgba(40, 40, 40, 0.5);\r\n    text-align: right;\r\n    font-weight: 400;\r\n    font-size: 16px;\r\n}\r\n.input2::placeholder{\r\n    padding-top: 14px;\r\n    padding-bottom: 14px;\r\n    padding-right: 14px;\r\n    padding-left: 335px;\r\n    color: rgba(40, 40, 40, 0.5);\r\n    text-align: right;\r\n    font-weight: 400;\r\n    font-size: 16px;\r\n    width: 50px;\r\n}\r\n.input3::placeholder{\r\n    padding-top: 14px;\r\n    padding-bottom: 14px;\r\n    padding-right: 14px;\r\n    padding-left: 303px;\r\n    color: rgba(40, 40, 40, 0.5);\r\n    text-align: right;\r\n    font-weight: 400;\r\n    font-size: 16px;\r\n    width: 82px;\r\n\r\n}\r\n.account{\r\n    text-decoration: none;\r\n    margin-top: 19px;\r\n    margin-right: 28px;\r\n    margin-left: 305px;\r\n    margin-bottom: 20px;\r\n    color: rgba(58, 139, 237, 1);\r\n    width: 127px;\r\n    font-weight: 400;\r\n    text-align: right;\r\n    font-size: 16px;\r\n    \r\n    \r\n}\r\n\r\n.title1{\r\n    text-align: center;\r\n    height: 219px;\r\n    margin-top: 62px;\r\n    font-size: 31px;\r\n    font-weight: 700;\r\n    color: rgba(40, 40, 40, 1);\r\n\r\n}\r\n.username_error{\r\n    color: red;\r\n    width: 300px;\r\n    /* height: 40px; */\r\n    font-size: 15px;\r\n    \r\n}"
+        }
+    ]
+}

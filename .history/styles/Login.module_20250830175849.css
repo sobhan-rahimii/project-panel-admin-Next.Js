@@ -1,0 +1,135 @@
+.matn{
+    width: 219px;
+    font-weight: 700;
+    font-size: 31px;
+    text-align: center;
+    color: rgba(40, 40, 40, 1);
+    margin-top: 62px;
+    margin-right: 610px;
+    margin-left: 611px;
+    white-space: nowrap;
+}
+.form{
+    border: 1px solid rgba(228, 228, 228, 1);
+    background-color: rgba(255, 255, 255, 1);
+    margin-right: 485px;
+    margin-left: 485px;
+    margin-top: 154px;
+    margin-bottom: 250px;
+    width: 470px;
+    height: 523px;
+    border-radius: 40px;
+
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.photo{
+    margin-right: 195px;
+    margin-left: 195px;
+    margin-top: 51px;
+    margin-bottom: 16.53px;
+
+}
+.title{
+    width: 82px;
+    margin-right: 179px;
+    margin-left: 209px;
+    /* margin-top: 16.53px; */
+    text-align: right;
+    font-weight: 500;
+    font-size: 24px;
+
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+
+}
+.input1{
+    width: 400px;
+    height: 53px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(242, 242, 242, 1);
+    margin-top: 63px;
+    margin-right: 35px;
+    margin-left: 35px;
+
+}
+.input1::placeholder{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    padding-left: 323px;
+    width: 62px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+    color: rgba(40, 40, 40, 0.5);
+}
+.input2{
+    width: 400px;
+    height: 53px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(242, 242, 242, 1);
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-top: 16px;
+}
+.input2::placeholder{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    padding-left: 335px;
+    width: 50px;
+    color: rgba(40, 40, 40, 0.5);
+    text-align: right;
+    font-size: 16px;
+    font-weight: 400;
+}
+.login{
+    width: 400px;
+    height: 53px;
+    border-radius: 15px;
+    background-color: rgba(85, 163, 240, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+    font-style: 20px;
+    text-align: center;
+    margin-right: 38px;
+    margin-left: 32px;
+    margin-top: 35px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 182px;
+    padding-left: 182px;
+    border: none;
+    cursor: pointer;
+}
+.createaccount{
+    width: 126px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+    color: rgba(58, 139, 237, 1);
+    margin-top: 16px;
+    margin-right: 42px;
+    margin-bottom: 19px;
+    margin-left: 302px;
+    text-decoration: none;
+}
+.error_username{
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid red;
+}
+.errpassword{
+    color: red;
+    text-align: center;
+    border: 1px solid red;
+    margin-top: 10px;
+}

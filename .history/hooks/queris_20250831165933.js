@@ -1,0 +1,3 @@
+const rEgister = (username,password,)=>{
+
+}

@@ -1,0 +1,438 @@
+{
+    "sourceFile": "pages/login.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 105,
+            "patches": [
+                {
+                    "date": 1756662459531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756662464929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function login() {\r\n   return (\r\n-    <div>login</div>\r\n+    \r\n   )\r\n }\r\n \r\n export default login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756662485615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,70 @@\n import React from 'react'\r\n \r\n function login() {\r\n   return (\r\n-    \r\n+    <div className={styles.title1}>\r\n+      <p>بوت کمپ بوتو استارت</p>\r\n+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n+        <div className={styles.img_title}>\r\n+          <Image\r\n+            className={styles.img}\r\n+            src=\"/union.png\"\r\n+            width={80}\r\n+            height={84.47}\r\n+          />\r\n+          <p className={styles.title}>فرم ثبت نام</p>\r\n+        </div>\r\n+        <div className={styles.inputs}>\r\n+          <input\r\n+            {...register(\"username\", {\r\n+              required: \"یوزرنیم را وارد کنید\",\r\n+              minLength: {\r\n+                value: 4,\r\n+                message: \"حدااقل 4 کارکتر وارد کنید\",\r\n+              },\r\n+            })}\r\n+            className={styles.input1}\r\n+            placeholder={\r\n+              errors.username ? errors.username.message : \"نام کاربری\"\r\n+            }\r\n+          />\r\n+\r\n+          <input\r\n+            {...register(\"password\", {\r\n+              required: \"پسورد را وارد کنید\",\r\n+              minLength: {\r\n+                value: 8,\r\n+                message: \"حدااقل 8 کاراکتر وارد کنید\",\r\n+              },\r\n+            })}\r\n+            className={styles.input2}\r\n+            placeholder={errors.password ? errors.password.message : \"رمزعبور\"}\r\n+          />\r\n+\r\n+          <input\r\n+            {...register(\"tpassword\", {\r\n+              required: \"تکرار پسورد الزامی است\",\r\n+              maxLength: {\r\n+                value: 8,\r\n+                message: \"تکرار پسورد باید 8 کاراکتر باشد\",\r\n+              },\r\n+            })}\r\n+            className={styles.input3}\r\n+            placeholder={\r\n+              errors.tpassword ? errors.tpassword.message : \"تکرار رمز عبور\"\r\n+            }\r\n+          />\r\n+\r\n+          <button className={styles.btn} type=\"submit\">\r\n+            ثبت نام\r\n+          </button>\r\n+          <Link className={styles.account} href=\"/login\">\r\n+            حساب کاربری دارید؟\r\n+          </Link>\r\n+        </div>\r\n+      </form>\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default login\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756662512043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n function login() {\r\n   return (\r\n-    <div className={styles.title1}>\r\n+    <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n         <div className={styles.img_title}>\r\n           <Image\r\n"
+                },
+                {
+                    "date": 1756662531939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n-        <div className={styles.img_title}>\r\n+        <div className={styles.flex}>\r\n           <Image\r\n             className={styles.img}\r\n             src=\"/union.png\"\r\n             width={80}\r\n"
+                },
+                {
+                    "date": 1756662558382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n         <div className={styles.flex}>\r\n           <Image\r\n-            className={styles.img}\r\n+            className={styles.photo}\r\n             src=\"/union.png\"\r\n             width={80}\r\n             height={84.47}\r\n           />\r\n"
+                },
+                {
+                    "date": 1756662616570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n               },\r\n             })}\r\n             className={styles.input1}\r\n             placeholder={\r\n-              errors.username ? errors.username.message : \"نام کاربری\"\r\n+               \"نام کاربری\"\r\n             }\r\n           />\r\n \r\n           <input\r\n"
+                },
+                {
+                    "date": 1756662622373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,11 +23,11 @@\n                 message: \"حدااقل 4 کارکتر وارد کنید\",\r\n               },\r\n             })}\r\n             className={styles.input1}\r\n-            placeholder={\r\n+            placeholder=\r\n                \"نام کاربری\"\r\n-            }\r\n+            \r\n           />\r\n \r\n           <input\r\n             {...register(\"password\", {\r\n"
+                },
+                {
+                    "date": 1756662635903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,15 +29,9 @@\n             \r\n           />\r\n \r\n           <input\r\n-            {...register(\"password\", {\r\n-              required: \"پسورد را وارد کنید\",\r\n-              minLength: {\r\n-                value: 8,\r\n-                message: \"حدااقل 8 کاراکتر وارد کنید\",\r\n-              },\r\n-            })}\r\n+            \r\n             className={styles.input2}\r\n             placeholder={errors.password ? errors.password.message : \"رمزعبور\"}\r\n           />\r\n \r\n"
+                },
+                {
+                    "date": 1756662644595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n \r\n           <input\r\n             \r\n             className={styles.input2}\r\n-            placeholder={errors.password ? errors.password.message : \"رمزعبور\"}\r\n+            placeholder= \"رمزعبور\"}\r\n           />\r\n \r\n           <input\r\n             {...register(\"tpassword\", {\r\n"
+                },
+                {
+                    "date": 1756662659325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,24 +31,12 @@\n \r\n           <input\r\n             \r\n             className={styles.input2}\r\n-            placeholder= \"رمزعبور\"}\r\n+            placeholder= \"رمزعبور\"\r\n           />\r\n \r\n-          <input\r\n-            {...register(\"tpassword\", {\r\n-              required: \"تکرار پسورد الزامی است\",\r\n-              maxLength: {\r\n-                value: 8,\r\n-                message: \"تکرار پسورد باید 8 کاراکتر باشد\",\r\n-              },\r\n-            })}\r\n-            className={styles.input3}\r\n-            placeholder={\r\n-              errors.tpassword ? errors.tpassword.message : \"تکرار رمز عبور\"\r\n-            }\r\n-          />\r\n+          \r\n \r\n           <button className={styles.btn} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662680938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n           />\r\n \r\n           \r\n \r\n-          <button className={styles.btn} type=\"submit\">\r\n+          <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n           <Link className={styles.account} href=\"/login\">\r\n             حساب کاربری دارید؟\r\n"
+                },
+                {
+                    "date": 1756662706457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n-          <Link className={styles.account} href=\"/login\">\r\n+          <Link className={styles.createaccount} href=\"/login\">\r\n             حساب کاربری دارید؟\r\n           </Link>\r\n         </div>\r\n       </form>\r\n"
+                },
+                {
+                    "date": 1756662731382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,9 @@\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input\r\n-            {...register(\"username\", {\r\n-              required: \"یوزرنیم را وارد کنید\",\r\n-              minLength: {\r\n-                value: 4,\r\n-                message: \"حدااقل 4 کارکتر وارد کنید\",\r\n-              },\r\n+            \r\n             })}\r\n             className={styles.input1}\r\n             placeholder=\r\n                \"نام کاربری\"\r\n"
+                },
+                {
+                    "date": 1756662737930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,8 @@\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input\r\n-            \r\n-            })}\r\n             className={styles.input1}\r\n             placeholder=\r\n                \"نام کاربری\"\r\n             \r\n"
+                },
+                {
+                    "date": 1756662763510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,10 @@\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input\r\n+        \r\n+            })}\r\n             className={styles.input1}\r\n             placeholder=\r\n                \"نام کاربری\"\r\n             \r\n"
+                },
+                {
+                    "date": 1756662768790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React from \"react\";\r\n \r\n function login() {\r\n   return (\r\n     <div className={styles.matn}>\r\n@@ -14,25 +14,12 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input\r\n-        \r\n-            })}\r\n-            className={styles.input1}\r\n-            placeholder=\r\n-               \"نام کاربری\"\r\n-            \r\n-          />\r\n+          <input className={styles.input1} placeholder=\"نام کاربری\" />\r\n \r\n-          <input\r\n-            \r\n-            className={styles.input2}\r\n-            placeholder= \"رمزعبور\"\r\n-          />\r\n+          <input className={styles.input2} placeholder=\"رمزعبور\" />\r\n \r\n-          \r\n-\r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n           <Link className={styles.createaccount} href=\"/login\">\r\n@@ -40,8 +27,8 @@\n           </Link>\r\n         </div>\r\n       </form>\r\n     </div>\r\n-  )\r\n+  );\r\n }\r\n \r\n\\ No newline at end of file\n-export default login\n+export default login;\r\n"
+                },
+                {
+                    "date": 1756662779683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React from \"react\";\r\n \r\n function login() {\r\n+    const \r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n@@ -30,5 +31,5 @@\n     </div>\r\n   );\r\n }\r\n \r\n-export default login;\n\\ No newline at end of file\n+export default login;\r\n"
+                },
+                {
+                    "date": 1756662784820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n \r\n function login() {\r\n-    const \r\n+    const [username]\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662792114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from \"react\";\r\n \r\n function login() {\r\n-    const [username]\r\n+    const [username,setUser]\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662798412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-import React from \"react\";\r\n+import React, { useState } from \"react\";\r\n \r\n function login() {\r\n-    const [username,setUser]\r\n+    const [username,setUserName] = useState(\"\")\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662804499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React, { useState } from \"react\";\r\n \r\n function login() {\r\n     const [username,setUserName] = useState(\"\")\r\n+    const [password]\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662810796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from \"react\";\r\n \r\n function login() {\r\n     const [username,setUserName] = useState(\"\")\r\n-    const [password]\r\n+    const [password,setpassword]\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662816183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from \"react\";\r\n \r\n function login() {\r\n     const [username,setUserName] = useState(\"\")\r\n-    const [password,setpassword]\r\n+    const [password,setpassword] = useState(\"\")\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662830031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input className={styles.input1} placeholder=\"نام کاربری\" />\r\n+          <input className={styles.input1} placeholder=\"نام کاربری\"  />\r\n \r\n           <input className={styles.input2} placeholder=\"رمزعبور\" />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n"
+                },
+                {
+                    "date": 1756662840327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input className={styles.input1} placeholder=\"نام کاربری\"  />\r\n+          <input className={styles.input1} placeholder=\"نام کاربری\" value={username}  />\r\n \r\n           <input className={styles.input2} placeholder=\"رمزعبور\" />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n"
+                },
+                {
+                    "date": 1756662846977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input className={styles.input1} placeholder=\"نام کاربری\" value={username}  />\r\n+          <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)} />\r\n \r\n           <input className={styles.input2} placeholder=\"رمزعبور\" />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n"
+                },
+                {
+                    "date": 1756662852962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)} />\r\n+          <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName()} />\r\n \r\n           <input className={styles.input2} placeholder=\"رمزعبور\" />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n"
+                },
+                {
+                    "date": 1756662862634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName()} />\r\n+          <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName(e.target.value)} />\r\n \r\n-          <input className={styles.input2} placeholder=\"رمزعبور\" />\r\n+          <input className={styles.input2} placeholder=\"رمزعبور\"  />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662870109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName(e.target.value)} />\r\n \r\n-          <input className={styles.input2} placeholder=\"رمزعبور\"  />\r\n+          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={} />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662876163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName(e.target.value)} />\r\n \r\n-          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={} />\r\n+          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={(e)=>set} />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662882564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName(e.target.value)} />\r\n \r\n-          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={(e)=>set} />\r\n+          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={(e)=>setpassword} />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662889724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         </div>\r\n         <div className={styles.inputs}>\r\n           <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName(e.target.value)} />\r\n \r\n-          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={(e)=>setpassword} />\r\n+          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={(e)=>setpassword(e.target.va)} />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662922234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import React, { useState } from \"react\";\r\n \r\n function login() {\r\n-    const [username,setUserName] = useState(\"\")\r\n-    const [password,setpassword] = useState(\"\")\r\n+  const [username, setUserName] = useState(\"\");\r\n+  const [password, setpassword] = useState(\"\");\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>\r\n+      <form onSubmit={handleSubmit} className={styles.form}>\r\n         <div className={styles.flex}>\r\n           <Image\r\n             className={styles.photo}\r\n             src=\"/union.png\"\r\n@@ -16,11 +16,21 @@\n           />\r\n           <p className={styles.title}>فرم ثبت نام</p>\r\n         </div>\r\n         <div className={styles.inputs}>\r\n-          <input className={styles.input1} placeholder=\"نام کاربری\" value={username} onChange={(e)=>setUserName(e.target.value)} />\r\n+          <input\r\n+            className={styles.input1}\r\n+            placeholder=\"نام کاربری\"\r\n+            value={username}\r\n+            onChange={(e) => setUserName(e.target.value)}\r\n+          />\r\n \r\n-          <input className={styles.input2} placeholder=\"رمزعبور\" value={password} onChange={(e)=>setpassword(e.target.va)} />\r\n+          <input\r\n+            className={styles.input2}\r\n+            placeholder=\"رمزعبور\"\r\n+            value={password}\r\n+            onChange={(e) => setpassword(e.target.value)}\r\n+          />\r\n \r\n           <button className={styles.login} type=\"submit\">\r\n             ثبت نام\r\n           </button>\r\n"
+                },
+                {
+                    "date": 1756662929072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n+  const Handle\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662935321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const Handle\r\n+  const handler\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662943106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const handler\r\n+  const handleSubmit = async()\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662952011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const handleSubmit = async()\r\n+  const handleSubmit = async()=>{\r\n+    \r\n+  }\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756662958842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const handleSubmit = async()=>{\r\n+  const handleSubmit = async(event)=>{\r\n     \r\n+\r\n   }\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n"
+                },
+                {
+                    "date": 1756662965865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async(event)=>{\r\n-    \r\n+    event.prevent\r\n \r\n   }\r\n   return (\r\n     <div className={styles.matn}>\r\n"
+                },
+                {
+                    "date": 1756662971166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async(event)=>{\r\n-    event.prevent\r\n+    event.preventDefault()\r\n+    \r\n \r\n   }\r\n   return (\r\n     <div className={styles.matn}>\r\n"
+                },
+                {
+                    "date": 1756664417064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,23 @@\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async(event)=>{\r\n     event.preventDefault()\r\n-    \r\n+    try {\r\n+      const { response, error } = await rEgister(\r\n+        data.username,\r\n+        data.password,\r\n+        data.currentPassword\r\n+      );\r\n+      console.log({ response, error });\r\n+      if (response.status === 201) {\r\n+        return router.push(\"/login\");\r\n+      }\r\n+    } catch (error) {\r\n+      if (error.response) {\r\n+        console.log(error.response.data);\r\n+      }\r\n+    }\r\n \r\n   }\r\n   return (\r\n     <div className={styles.matn}>\r\n"
+                },
+                {
+                    "date": 1756664422926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async(event)=>{\r\n     event.preventDefault()\r\n     try {\r\n-      const { response, error } = await rEgister(\r\n+      const { response, error } = await log(\r\n         data.username,\r\n         data.password,\r\n         data.currentPassword\r\n       );\r\n"
+                },
+                {
+                    "date": 1756664435585,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async(event)=>{\r\n     event.preventDefault()\r\n     try {\r\n-      const { response, error } = await log(\r\n-        data.username,\r\n+      const { response, error } = await login(\r\n+        username,\r\n         data.password,\r\n         data.currentPassword\r\n       );\r\n       console.log({ response, error });\r\n"
+                },
+                {
+                    "date": 1756664445714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n     event.preventDefault()\r\n     try {\r\n       const { response, error } = await login(\r\n         username,\r\n-        data.password,\r\n-        data.currentPassword\r\n+        password,\r\n+        \r\n       );\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/login\");\r\n"
+                },
+                {
+                    "date": 1756664455285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,11 @@\n   const handleSubmit = async(event)=>{\r\n     event.preventDefault()\r\n     try {\r\n       const { response, error } = await login(\r\n-        username,\r\n+        {username,\r\n         password,\r\n+        }\r\n         \r\n       );\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n"
+                },
+                {
+                    "date": 1756664468808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         \r\n       );\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n-        return router.push(\"/login\");\r\n+        return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n         console.log(error.response.data);\r\n"
+                },
+                {
+                    "date": 1756664481372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,9 @@\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n+      \r\n     } catch (error) {\r\n       if (error.response) {\r\n         console.log(error.response.data);\r\n       }\r\n"
+                },
+                {
+                    "date": 1756664487424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n-      \r\n+      if(!tok)\r\n     } catch (error) {\r\n       if (error.response) {\r\n         console.log(error.response.data);\r\n       }\r\n"
+                },
+                {
+                    "date": 1756664647783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React, { useState } from \"react\";\r\n+import sty\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n@@ -15,9 +16,9 @@\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n-      if(!tok)\r\n+      \r\n     } catch (error) {\r\n       if (error.response) {\r\n         console.log(error.response.data);\r\n       }\r\n"
+                },
+                {
+                    "date": 1756664654016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import sty\r\n+import styles from \"../\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664661992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../\"\r\n+import styles from \"../.\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664667858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../.\"\r\n+import styles from \"../\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664685737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../\"\r\n+import styles from \".../\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664690887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \".../\"\r\n+import styles from \"./\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664697957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"./\"\r\n+import styles from \"../.\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664706911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../.\"\r\n+import styles from \"..\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664714023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"..\"\r\n+import styles from \"../\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664721593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../\"\r\n+import styles from \"../styles/\"\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664759445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../styles/\"\r\n+import styles from \"../styles/Login.module.css\"\r\n+import Image from \"next/image\";\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664773810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\"\r\n import Image from \"next/image\";\r\n+import Link from \"next/link\";\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756664992734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n     try {\r\n       const { response, error } = await login(\r\n         {username,\r\n         password,\r\n-        }\r\n         \r\n+        \r\n       );\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n"
+                },
+                {
+                    "date": 1756665022580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,11 @@\n   const handleSubmit = async(event)=>{\r\n     event.preventDefault()\r\n     try {\r\n       const { response, error } = await login(\r\n-        {username,\r\n-        password,\r\n         \r\n         \r\n+        \r\n       );\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n"
+                },
+                {
+                    "date": 1756665029502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n   const handleSubmit = async(event)=>{\r\n     event.preventDefault()\r\n     try {\r\n       const { response, error } = await login(\r\n+        {username}\r\n         \r\n         \r\n-        \r\n       );\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n"
+                },
+                {
+                    "date": 1756665066655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,26 @@\n import React, { useState } from \"react\";\r\n-import styles from \"../styles/Login.module.css\"\r\n+import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const handleSubmit = async(event)=>{\r\n-    event.preventDefault()\r\n+  const handleSubmit = async (event) => {\r\n+    event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login(\r\n-        {username}\r\n-        \r\n-        \r\n-      );\r\n+      const { response, error } = await login({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n-      \r\n     } catch (error) {\r\n       if (error.response) {\r\n         console.log(error.response.data);\r\n       }\r\n     }\r\n-\r\n-  }\r\n+  };\r\n   return (\r\n     <div className={styles.matn}>\r\n       <p>بوت کمپ بوتو استارت</p>\r\n       <form onSubmit={handleSubmit} className={styles.form}>\r\n"
+                },
+                {
+                    "date": 1756665147201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login({ username, password });\r\n+      const { response, error } = await ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665164950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n+import \r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756665170112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n-import \r\n+import {lo}\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756665177401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n-import {lo}\r\n+import { login } from \"@/services/auth\";\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await ({ username, password });\r\n+      const { response, error } = await lo ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665184929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await lo ({ username, password });\r\n+      const { response, error } = await  ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665194692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await  ({ username, password });\r\n+      const { response, error } = await login ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665214785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n-import { login } from \"@/services/auth\";\r\n+import login\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756665225445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n-import login\r\n+import { login } from \"@/services/auth\";\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login ({ username, password });\r\n+      const { response, error } = await  ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665230708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await  ({ username, password });\r\n+      const { response, error } = await login ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665263300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login ({ username, password });\r\n+      const { response, error } = await Lo ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665271911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await Lo ({ username, password });\r\n+      const { response, error } = await login ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665307782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login ({ username, password });\r\n+      const { response, error } = await log ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665316713,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await log ({ username, password });\r\n+      const { response, error } = await login ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665323068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login ({ username, password });\r\n+      const { response, error } = lo ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665328635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = lo ({ username, password });\r\n+      const { response, error } = login ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665371575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = login ({ username, password });\r\n+      const { response, error } = await login ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756665400866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from \"react\";\r\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n-import { login } from \"@/services/auth\";\r\n+import { loginn } from \"@/services/auth\";\r\n \r\n function login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756706162420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,15 @@\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n \r\n-function login() {\r\n+function »ogin() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await login ({ username, password });\r\n+      const { response, error } = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756706169829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n \r\n-function »ogin() {\r\n+function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n@@ -60,5 +60,5 @@\n     </div>\r\n   );\r\n }\r\n \r\n-export default login;\r\n+export default Login;\r\n"
+                },
+                {
+                    "date": 1756706180475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n+  const router = \r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706188307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n+import { useRouter } from \"next/router\";\r\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = \r\n+  const router = useRouter\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706196627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = useRouter\r\n+  const router = use\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706205311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = use\r\n+  const router = \r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706211610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n-import { useRouter } from \"next/router\";\r\n+usero\r\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1756706218320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,11 @@\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n-usero\r\n+import { useRouter } from \"next/navigation\";\r\n \r\n+\r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const router = \r\n"
+                },
+                {
+                    "date": 1756706225565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = \r\n+  const router = userou\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706287818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,15 @@\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n-import { useRouter } from \"next/navigation\";\r\n \r\n \r\n+\r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = userou\r\n+  const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706293382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = useRouter()\r\n+  const router = use\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706299096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,15 +2,16 @@\n import styles from \"../styles/Login.module.css\";\r\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n+import { useRouter } from \"next/router\";\r\n \r\n \r\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = use\r\n+  const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n       const { response, error } = await loginn ({ username, password });\r\n"
+                },
+                {
+                    "date": 1756706518382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await loginn ({ username, password });\r\n+      const  = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756706525582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const  = await loginn ({ username, password });\r\n+      const re = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756706601249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = useRouter()\r\n+  const router = useRouter\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const re = await loginn ({ username, password });\r\n+      const { response, error } = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756706871209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n \r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n-  const router = useRouter\r\n+  const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const { response, error } = await loginn ({ username, password });\r\n+      const re = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756707038186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,12 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const re = await loginn ({ username, password });\r\n+      const response = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n+      console.log(response);\r\n+      \r\n       if (response.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756707364519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const response = await loginn ({ username, password });\r\n+      const  = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       console.log(response);\r\n       \r\n-      if (response.status === 201) {\r\n+      if (response?.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756707369813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const  = await loginn ({ username, password });\r\n+      const {response} = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       console.log(response);\r\n       \r\n       if (response?.status === 201) {\r\n"
+                },
+                {
+                    "date": 1756707376314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const {response} = await loginn ({ username, password });\r\n+      const {response,error} = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n       console.log(response);\r\n       \r\n       if (response?.status === 201) {\r\n"
+                },
+                {
+                    "date": 1756708452276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn ({ username, password });\r\n       console.log({ response, error });\r\n-      console.log(response);\r\n+     \r\n       \r\n       if (response?.status === 201) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756708549891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const {response,error} = await loginn ({ username, password });\r\n+      const {response,error} = await loginn ({username, password });\r\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 201) {\r\n"
+                },
+                {
+                    "date": 1756708555308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   const router = useRouter()\r\n   const handleSubmit = async (event) => {\r\n     event.preventDefault();\r\n     try {\r\n-      const {response,error} = await loginn ({username, password });\r\n+      const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 201) {\r\n"
+                },
+                {
+                    "date": 1756712046850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 201) {\r\n+      if (response?.status === 200) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                }
+            ],
+            "date": 1756662459531,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction login() {\r\n  return (\r\n    <div>login</div>\r\n  )\r\n}\r\n\r\nexport default login"
+        }
+    ]
+}
