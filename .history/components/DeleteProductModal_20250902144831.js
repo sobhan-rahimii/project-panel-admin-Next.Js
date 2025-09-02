@@ -18,7 +18,7 @@ function DeleteProductModal({productId,ondelete,onclose}) {
             <p className={styles.title}>آیا از حذف این محصول مطمئنید؟</p>
             <div className={styles.flex1}>
                 <button className={styles.delete} type='submit'>حذف</button>
-                <button className={styles.cancell} onClick={onclose}>لغو</button>
+                <button className={styles.} onClick={onclose}>لغو</button>
             </div>
         </form>
     </div>

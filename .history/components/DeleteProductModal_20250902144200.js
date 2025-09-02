@@ -13,12 +13,12 @@ function DeleteProductModal({productId,ondelete,onclose}) {
   return (
 
     <div className={styles.back}>
-        <form className={styles.form} onSubmit={handleDelete}>
+        <form className={styles.flex} onSubmit={handleDelete}>
             <Image className={styles.photo} src="/Close.png" width={96} height={97.83} />
             <p className={styles.title}>آیا از حذف این محصول مطمئنید؟</p>
-            <div className={styles.flex1}>
-                <button className={styles.delete} type='submit'>حذف</button>
-                <button className={styles.cancell} onClick={onclose}>لغو</button>
+            <div className=''>
+                <button type='submit'>حذف</button>
+                <button onClick={onclose}>لغو</button>
             </div>
         </form>
     </div>
