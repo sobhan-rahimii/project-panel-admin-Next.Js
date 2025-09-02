@@ -1,0 +1,32 @@
+import { useAddProducts } from "@/hooks/queries";
+import React, { useState } from "react";
+import styles from "../styles/AddProductModal.module.css"
+
+function AddProductModal({isOpenModal,setIsOpenModal,form,setForm,submitHandler}) {
+  
+    if(!isOpenModal) return
+ 
+
+  
+  return (
+    <>
+      <div className={styles.back}>
+        <form className={styles.form} onSubmit={submitHandler}>
+          <p className={styles.title}>ایجاد محصول جدید</p>
+          <label className={styles.label1}>نام کالا</label>
+          <input placeholder="نام کالا" />
+          <label className={styles.label2}>تعداد موجودی</label>
+          <input placeholder="تعداد" />
+          <label className="">قیمت</label>
+          <input placeholder="قیمت" />
+          <div>
+            <button type="submit">ایجاد</button>
+            <button onClick={()=>setIsOpenModal(false)}>انصراف</button>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+}
+
+export default AddProductModal;

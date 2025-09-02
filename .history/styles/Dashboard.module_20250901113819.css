@@ -1,0 +1,133 @@
+.search {
+  width: 1140px;
+  height: 68px;
+  border-radius: 15px;
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-top: 28px;
+  margin-bottom: 41px;
+}
+.icon_search {
+  position: absolute;
+  /* left: 1092px; */
+  /* right: 22px; */
+  right: 174px;
+  top: 50px;
+  /* padding-top: 22px; */
+  /* padding-right: 22px; */
+  /* padding-bottom: 22px; */
+  /* padding-left: 1092px; */
+}
+.search::placeholder {
+  width: 70px;
+  padding-right: 50px;
+}
+.flex {
+  display: flex;
+}
+.icon {
+  margin-right: 150px;
+  margin-top: 41px;
+  /* margin-left: 6px;/ */
+}
+.title {
+  margin-top: 41px;
+  margin-right: 6px;
+  margin-left: 862px;
+  /* margin-bottom: 24.36px; */
+  line-height: 100%;
+}
+.addproduct {
+  margin-left: 150px;
+  margin-top: 42px;
+  width: 132px;
+  height: 45px;
+  cursor: pointer;
+  background-color: rgba(85, 163, 240, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 16px;
+  text-align: right;
+  border: none;
+  border-radius: 10px;
+  padding-right: 17px;
+  padding-left: 17px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.trr {
+  width: 1140px;
+  height: 70px;
+  background-color: rgba(242, 242, 242, 1);
+  margin-right: 150px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: 24px;
+  margin-left: 150px;
+}
+.th1 {
+  width: 46px;
+  padding-right: 32px;
+  white-space: nowrap;
+  padding-top: 25px;
+  padding-bottom: 23px;
+  
+}
+.th2 {
+  padding-right: 150px;
+  width: 57px;
+  padding-top: 25px;
+  padding-bottom: 23px;
+  
+}
+.th3 {
+  padding-right: 150px;
+  padding-top: 25px;
+  padding-bottom: 23px;
+  
+}
+.th4 {
+  padding-right: 150px;
+  padding-left: 428px;
+  padding-top: 25px;
+  padding-bottom: 23px;
+  
+}
+.tr2{
+    width: 1140px;
+    background-color: rgba(255, 255, 255, 1);
+    
+}
+.td1{
+    font-size: 12px;
+    font-weight: 400;
+    text-align: right;
+    white-space: nowrap ;
+    padding-right: 52px;
+    padding-top:16 ;
+    padding-left: 52px;
+
+}
+.td2{
+    padding-right: 104px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    
+
+}
+.td3{
+    padding-right: 185px;
+    white-space: nowrap;
+}
+.td4{
+    padding-right: 122px;
+    
+}
+.edit{
+  margin-left:73px ;
+  background-color: ;
+}
+.btnedit{
+  background-color: none;
+}

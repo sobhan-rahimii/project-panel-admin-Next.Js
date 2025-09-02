@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 105,
+            "activePatchIndex": 150,
             "patches": [
                 {
                     "date": 1756662459531,
@@ -428,6 +428,186 @@
                 {
                     "date": 1756712046850,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 201) {\r\n+      if (response?.status === 200) {\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756730013607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200) {\r\n+        \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756730019763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200) {\r\n-        \r\n+        getc\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756730025961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n import { useRouter } from \"next/router\";\r\n+import { getCookie } from \"@/services/cookie\";\r\n \r\n \r\n \r\n function Login() {\r\n@@ -18,9 +19,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200) {\r\n-        getc\r\n+        getCookie(\"token\")\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756730075813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200) {\r\n-        getCookie(\"token\")\r\n+        getCookie(\"Token\")\r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756730339966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,72 @@\n+import React, { useState } from \"react\";\r\n+import styles from \"../styles/Login.module.css\";\r\n+import Image from \"next/image\";\r\n+import Link from \"next/link\";\r\n+import { loginn } from \"@/services/auth\";\r\n+import { useRouter } from \"next/router\";\r\n+import { getCookie } from \"@/services/cookie\";\r\n+\r\n+\r\n+\r\n+function Login() {\r\n+  const [username, setUserName] = useState(\"\");\r\n+  const [password, setpassword] = useState(\"\");\r\n+  const router = useRouter()\r\n+  const handleSubmit = async (event) => {\r\n+    event.preventDefault();\r\n+    try {\r\n+      const {response,error} = await loginn (username, password );\r\n+      console.log({ response, error });\r\n+     \r\n+      \r\n+      if (response?.status === 200) {\r\n+        \r\n+        return router.push(\"/dashboard\");\r\n+      }\r\n+    } catch (error) {\r\n+      if (error.response) {\r\n+        console.log(error.response.data);\r\n+      }\r\n+    }\r\n+  };\r\n+  return (\r\n+    <div className={styles.matn}>\r\n+      <p>بوت کمپ بوتو استارت</p>\r\n+      <form onSubmit={handleSubmit} className={styles.form}>\r\n+        <div className={styles.flex}>\r\n+          <Image\r\n+            className={styles.photo}\r\n+            src=\"/union.png\"\r\n+            width={80}\r\n+            height={84.47}\r\n+          />\r\n+          <p className={styles.title}>فرم ثبت نام</p>\r\n+        </div>\r\n+        <div className={styles.inputs}>\r\n+          <input\r\n+            className={styles.input1}\r\n+            placeholder=\"نام کاربری\"\r\n+            value={username}\r\n+            onChange={(e) => setUserName(e.target.value)}\r\n+          />\r\n+\r\n+          <input\r\n+            className={styles.input2}\r\n+            placeholder=\"رمزعبور\"\r\n+            value={password}\r\n+            onChange={(e) => setpassword(e.target.value)}\r\n+          />\r\n+\r\n+          <button className={styles.login} type=\"submit\">\r\n+            ثبت نام\r\n+          </button>\r\n+          <Link className={styles.createaccount} href=\"/login\">\r\n+            حساب کاربری دارید؟\r\n+          </Link>\r\n+        </div>\r\n+      </form>\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default Login;\r\n"
+                },
+                {
+                    "date": 1756730414690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 200) {\r\n+      if (response?.status === 200)  {\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n@@ -69,76 +69,4 @@\n   );\r\n }\r\n \r\n export default Login;\r\n-import React, { useState } from \"react\";\r\n-import styles from \"../styles/Login.module.css\";\r\n-import Image from \"next/image\";\r\n-import Link from \"next/link\";\r\n-import { loginn } from \"@/services/auth\";\r\n-import { useRouter } from \"next/router\";\r\n-import { getCookie } from \"@/services/cookie\";\r\n-\r\n-\r\n-\r\n-function Login() {\r\n-  const [username, setUserName] = useState(\"\");\r\n-  const [password, setpassword] = useState(\"\");\r\n-  const router = useRouter()\r\n-  const handleSubmit = async (event) => {\r\n-    event.preventDefault();\r\n-    try {\r\n-      const {response,error} = await loginn (username, password );\r\n-      console.log({ response, error });\r\n-     \r\n-      \r\n-      if (response?.status === 200) {\r\n-        getCookie(\"Token\")\r\n-        return router.push(\"/dashboard\");\r\n-      }\r\n-    } catch (error) {\r\n-      if (error.response) {\r\n-        console.log(error.response.data);\r\n-      }\r\n-    }\r\n-  };\r\n-  return (\r\n-    <div className={styles.matn}>\r\n-      <p>بوت کمپ بوتو استارت</p>\r\n-      <form onSubmit={handleSubmit} className={styles.form}>\r\n-        <div className={styles.flex}>\r\n-          <Image\r\n-            className={styles.photo}\r\n-            src=\"/union.png\"\r\n-            width={80}\r\n-            height={84.47}\r\n-          />\r\n-          <p className={styles.title}>فرم ثبت نام</p>\r\n-        </div>\r\n-        <div className={styles.inputs}>\r\n-          <input\r\n-            className={styles.input1}\r\n-            placeholder=\"نام کاربری\"\r\n-            value={username}\r\n-            onChange={(e) => setUserName(e.target.value)}\r\n-          />\r\n-\r\n-          <input\r\n-            className={styles.input2}\r\n-            placeholder=\"رمزعبور\"\r\n-            value={password}\r\n-            onChange={(e) => setpassword(e.target.value)}\r\n-          />\r\n-\r\n-          <button className={styles.login} type=\"submit\">\r\n-            ثبت نام\r\n-          </button>\r\n-          <Link className={styles.createaccount} href=\"/login\">\r\n-            حساب کاربری دارید؟\r\n-          </Link>\r\n-        </div>\r\n-      </form>\r\n-    </div>\r\n-  );\r\n-}\r\n-\r\n-export default Login;\r\n"
+                },
+                {
+                    "date": 1756730435529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 200)  {\r\n+      if (response?.status === 200 || response)  {\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730444290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 200 || response)  {\r\n+      if (response?.status === 200 || response.data?.toke)  {\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730451361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 200 || response.data?.toke)  {\r\n+      if (response?.status === 200 || response.data?.token)  {\r\n+        set\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730457796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n import { useRouter } from \"next/router\";\r\n import { getCookie } from \"@/services/cookie\";\r\n+import { setCookie } from \"nookies\";\r\n \r\n \r\n \r\n function Login() {\r\n@@ -19,9 +20,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200 || response.data?.token)  {\r\n-        set\r\n+        setCookie(\"\")\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730465977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200 || response.data?.token)  {\r\n-        setCookie(\"\")\r\n+        setCookie(\"token\", response)\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730514453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       console.log({ response, error });\r\n      \r\n       \r\n       if (response?.status === 200 || response.data?.token)  {\r\n-        setCookie(\"token\", response)\r\n+        setCookie(\"token\", response.data.token,30)\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730675549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      \r\n       \r\n-      if (response?.status === 200 || response.data?.token)  {\r\n+      if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n"
+                },
+                {
+                    "date": 1756730682568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     \r\n+     i\r\n       \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n         \r\n"
+                },
+                {
+                    "date": 1756730689601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,82 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     i\r\n+     if(import React, { useState } from \"react\";\r\n+import styles from \"../styles/Login.module.css\";\r\n+import Image from \"next/image\";\r\n+import Link from \"next/link\";\r\n+import { loginn } from \"@/services/auth\";\r\n+import { useRouter } from \"next/router\";\r\n+import { getCookie } from \"@/services/cookie\";\r\n+\r\n+\r\n+\r\n+function Login() {\r\n+  const [username, setUserName] = useState(\"\");\r\n+  const [password, setpassword] = useState(\"\");\r\n+  const router = useRouter()\r\n+  const handleSubmit = async (event) => {\r\n+    event.preventDefault();\r\n+    try {\r\n+      const {response,error} = await loginn (username, password );\r\n+      console.log({ response, error });\r\n+     \r\n       \r\n+      if (response?.status === 200) {\r\n+        \r\n+        return router.push(\"/dashboard\");\r\n+      }\r\n+    } catch (error) {\r\n+      if (error.response) {\r\n+        console.log(error.response.data);\r\n+      }\r\n+    }\r\n+  };\r\n+  return (\r\n+    <div className={styles.matn}>\r\n+      <p>بوت کمپ بوتو استارت</p>\r\n+      <form onSubmit={handleSubmit} className={styles.form}>\r\n+        <div className={styles.flex}>\r\n+          <Image\r\n+            className={styles.photo}\r\n+            src=\"/union.png\"\r\n+            width={80}\r\n+            height={84.47}\r\n+          />\r\n+          <p className={styles.title}>فرم ثبت نام</p>\r\n+        </div>\r\n+        <div className={styles.inputs}>\r\n+          <input\r\n+            className={styles.input1}\r\n+            placeholder=\"نام کاربری\"\r\n+            value={username}\r\n+            onChange={(e) => setUserName(e.target.value)}\r\n+          />\r\n+\r\n+          <input\r\n+            className={styles.input2}\r\n+            placeholder=\"رمزعبور\"\r\n+            value={password}\r\n+            onChange={(e) => setpassword(e.target.value)}\r\n+          />\r\n+\r\n+          <button className={styles.login} type=\"submit\">\r\n+            ثبت نام\r\n+          </button>\r\n+          <Link className={styles.createaccount} href=\"/login\">\r\n+            حساب کاربری دارید؟\r\n+          </Link>\r\n+        </div>\r\n+      </form>\r\n+    </div>\r\n+  );\r\n+}\r\n+\r\n+export default Login;\r\n+)\r\n+      \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n         \r\n         return router.push(\"/dashboard\");\r\n"
+                },
+                {
+                    "date": 1756730701767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,82 +17,10 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(import React, { useState } from \"react\";\r\n-import styles from \"../styles/Login.module.css\";\r\n-import Image from \"next/image\";\r\n-import Link from \"next/link\";\r\n-import { loginn } from \"@/services/auth\";\r\n-import { useRouter } from \"next/router\";\r\n-import { getCookie } from \"@/services/cookie\";\r\n-\r\n-\r\n-\r\n-function Login() {\r\n-  const [username, setUserName] = useState(\"\");\r\n-  const [password, setpassword] = useState(\"\");\r\n-  const router = useRouter()\r\n-  const handleSubmit = async (event) => {\r\n-    event.preventDefault();\r\n-    try {\r\n-      const {response,error} = await loginn (username, password );\r\n-      console.log({ response, error });\r\n-     \r\n+     if(RES)\r\n       \r\n-      if (response?.status === 200) {\r\n-        \r\n-        return router.push(\"/dashboard\");\r\n-      }\r\n-    } catch (error) {\r\n-      if (error.response) {\r\n-        console.log(error.response.data);\r\n-      }\r\n-    }\r\n-  };\r\n-  return (\r\n-    <div className={styles.matn}>\r\n-      <p>بوت کمپ بوتو استارت</p>\r\n-      <form onSubmit={handleSubmit} className={styles.form}>\r\n-        <div className={styles.flex}>\r\n-          <Image\r\n-            className={styles.photo}\r\n-            src=\"/union.png\"\r\n-            width={80}\r\n-            height={84.47}\r\n-          />\r\n-          <p className={styles.title}>فرم ثبت نام</p>\r\n-        </div>\r\n-        <div className={styles.inputs}>\r\n-          <input\r\n-            className={styles.input1}\r\n-            placeholder=\"نام کاربری\"\r\n-            value={username}\r\n-            onChange={(e) => setUserName(e.target.value)}\r\n-          />\r\n-\r\n-          <input\r\n-            className={styles.input2}\r\n-            placeholder=\"رمزعبور\"\r\n-            value={password}\r\n-            onChange={(e) => setpassword(e.target.value)}\r\n-          />\r\n-\r\n-          <button className={styles.login} type=\"submit\">\r\n-            ثبت نام\r\n-          </button>\r\n-          <Link className={styles.createaccount} href=\"/login\">\r\n-            حساب کاربری دارید؟\r\n-          </Link>\r\n-        </div>\r\n-      </form>\r\n-    </div>\r\n-  );\r\n-}\r\n-\r\n-export default Login;\r\n-)\r\n-      \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n         \r\n         return router.push(\"/dashboard\");\r\n"
+                },
+                {
+                    "date": 1756730707278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(RES)\r\n+     if(response.data)\r\n       \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n         \r\n"
+                },
+                {
+                    "date": 1756730713211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,12 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(response.data)\r\n+     if(response.data?.token){\r\n       \r\n+     }\r\n+      \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n         \r\n         return router.push(\"/dashboard\");\r\n"
+                },
+                {
+                    "date": 1756730720495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      \r\n+      set\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n"
+                },
+                {
+                    "date": 1756730730204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      set\r\n+      setCookie(\"Toen\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n"
+                },
+                {
+                    "date": 1756730742948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"Toen\")\r\n+      setCookie(\"Token\", response.data.token)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         setCookie(\"token\", response.data.token,30)\r\n"
+                },
+                {
+                    "date": 1756730792017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       setCookie(\"Token\", response.data.token)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n-        setCookie(\"token\", response.data.token,30)\r\n+        setCookie(\"token\", response.data.token)\r\n         \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n"
+                },
+                {
+                    "date": 1756730800471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,10 @@\n       setCookie(\"Token\", response.data.token)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n-        setCookie(\"token\", response.data.token)\r\n         \r\n+        \r\n         return router.push(\"/dashboard\");\r\n       }\r\n     } catch (error) {\r\n       if (error.response) {\r\n"
+                },
+                {
+                    "date": 1756730910348,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"Token\", response.data.token)\r\n+      setCookie(\"token\", response.data.token)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732052761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token)\r\n+      setCookie(\"token\", response.data.token,30)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732192536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token,30)\r\n+      setCookie(\"token\", response.data.token,)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732201768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token,)\r\n+      setCookie(\"token\", response.data.token,to)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732208224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token,to)\r\n+      setCookie(\"token\", response.data.token,\"token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732310068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token,\"token\")\r\n+      setCookie(\"token\", response.data.token,)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732334339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token,)\r\n+      setCookie(\"token\", response.data.token,30)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732489886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\", response.data.token,30)\r\n+      setCookie(\"Token\", response.data.token,30)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732628604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"Token\", response.data.token,30)\r\n+      get(\"Token\", response.data.token,30)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732788885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,12 @@\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n import { useRouter } from \"next/router\";\r\n-import { getCookie } from \"@/services/cookie\";\r\n-import { setCookie } from \"nookies\";\r\n \r\n \r\n \r\n+\r\n function Login() {\r\n   const [username, setUserName] = useState(\"\");\r\n   const [password, setpassword] = useState(\"\");\r\n   const router = useRouter()\r\n@@ -18,9 +17,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      get(\"Token\", response.data.token,30)\r\n+      getCookie(\"Token\", response.data.token,30)\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732797047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      getCookie(\"Token\", response.data.token,30)\r\n+      \r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732806116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import Image from \"next/image\";\r\n import Link from \"next/link\";\r\n import { loginn } from \"@/services/auth\";\r\n import { useRouter } from \"next/router\";\r\n+import { setCookie } from \"@/services/cookie\";\r\n \r\n \r\n \r\n \r\n@@ -17,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      \r\n+      setCookie(\"token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756732898229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"token\")\r\n+      setCookie(\"Token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756733075320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"Token\")\r\n+      setCookie(\"فoken\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756733236851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data?.token){\r\n-      setCookie(\"فoken\")\r\n+      setCookie(\"Token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756733275511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(response.data?.token){\r\n+     if(response.data.token){\r\n       setCookie(\"Token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n"
+                },
+                {
+                    "date": 1756733308336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(response.data.token){\r\n+     if(response.data.Token){\r\n       setCookie(\"Token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n"
+                },
+                {
+                    "date": 1756733374812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(response.data.Token){\r\n+     if(response.data.token){\r\n       setCookie(\"Token\")\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n"
+                },
+                {
+                    "date": 1756733688247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response.data.token){\r\n-      setCookie(\"Token\")\r\n+      setCookie(\"token\", data?.token);\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756733945802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(response.data.token){\r\n+     if(response?.data.token){\r\n       setCookie(\"token\", data?.token);\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n"
+                },
+                {
+                    "date": 1756733954334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     event.preventDefault();\r\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n-     if(response?.data.token){\r\n-      setCookie(\"token\", data?.token);\r\n+     if(response?.data?.token){\r\n+      setCookie(\"token\",response data?.token);\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
+                },
+                {
+                    "date": 1756733960920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     try {\r\n       const {response,error} = await loginn (username, password );\r\n       console.log({ response, error });\r\n      if(response?.data?.token){\r\n-      setCookie(\"token\",response data?.token);\r\n+      setCookie(\"token\",response.data?.token);\r\n      }\r\n       \r\n       if (response?.status === 200 )  {\r\n         \r\n"
                 }
             ],
             "date": 1756662459531,

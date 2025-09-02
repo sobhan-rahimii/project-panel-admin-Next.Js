@@ -1,0 +1,62 @@
+{
+    "sourceFile": "services/cookie.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1756731629015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756731635309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,6 @@\n \r\n const setCookie = (tokens) => {\r\n   document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n     1 * 24 * 60 * 60\r\n-  }`;\n\\ No newline at end of file\n+  }`\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756731813808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,4 @@\n }\r\n \r\n export{getCookie}\r\n \r\n-const setCookie = (tokens) => {\r\n-  document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n-    1 * 24 * 60 * 60\r\n-  }`\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756732726821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,14 @@\n     ?.split(\"=\")[1]\r\n }\r\n \r\n export{getCookie}\r\n+const setCookie = (tokens) => {\r\n+  document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n+    1 * 24 * 60 * 60\r\n+  }`;\r\n \r\n+  document.cookie = `refreshToken=${tokens.refreshToken}; max-age=${\r\n+    30 * 24 * 60 * 60\r\n+  }`;\r\n+};\r\n+\r\n"
+                },
+                {
+                    "date": 1756732736088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,15 +4,16 @@\n     .find((token)=>token.trim().split(\"=\")[0]=== cookieName)\r\n     ?.split(\"=\")[1]\r\n }\r\n \r\n-export{getCookie}\r\n const setCookie = (tokens) => {\r\n-  document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n-    1 * 24 * 60 * 60\r\n-  }`;\r\n-\r\n-  document.cookie = `refreshToken=${tokens.refreshToken}; max-age=${\r\n-    30 * 24 * 60 * 60\r\n-  }`;\r\n+    document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n+        1 * 24 * 60 * 60\r\n+    }`;\r\n+    \r\n+    document.cookie = `refreshToken=${tokens.refreshToken}; max-age=${\r\n+        30 * 24 * 60 * 60\r\n+    }`;\r\n };\r\n \r\n+\r\n+export{getCookie}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756732746843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     ?.split(\"=\")[1]\r\n }\r\n \r\n const setCookie = (tokens) => {\r\n-    document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n+    document.cookie = `accessToken=${tokens.tok}; max-age=${\r\n         1 * 24 * 60 * 60\r\n     }`;\r\n     \r\n     document.cookie = `refreshToken=${tokens.refreshToken}; max-age=${\r\n"
+                },
+                {
+                    "date": 1756732756730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,13 @@\n     ?.split(\"=\")[1]\r\n }\r\n \r\n const setCookie = (tokens) => {\r\n-    document.cookie = `accessToken=${tokens.tok}; max-age=${\r\n+    document.cookie = `accessToken=${tokens.token}; max-age=${\r\n         1 * 24 * 60 * 60\r\n     }`;\r\n     \r\n-    document.cookie = `refreshToken=${tokens.refreshToken}; max-age=${\r\n-        30 * 24 * 60 * 60\r\n-    }`;\r\n+    \r\n };\r\n \r\n \r\n export{getCookie}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756732846239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,13 +5,13 @@\n     ?.split(\"=\")[1]\r\n }\r\n \r\n const setCookie = (tokens) => {\r\n-    document.cookie = `accessToken=${tokens.token}; max-age=${\r\n+    document.cookie = `=${tokens.token}; max-age=${\r\n         1 * 24 * 60 * 60\r\n     }`;\r\n     \r\n     \r\n };\r\n \r\n \r\n\\ No newline at end of file\n-export{getCookie}\n+export{getCookie,setCookie}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756733176991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n-const  getCookie = (cookieName)=>{\r\n-    return document.cookie\r\n+const getCookie = (cookieName) => {\r\n+  return document.cookie\r\n     .split(\";\")\r\n-    .find((token)=>token.trim().split(\"=\")[0]=== cookieName)\r\n-    ?.split(\"=\")[1]\r\n-}\r\n+    .find((token) => token.trim().split(\"=\")[0] === cookieName)\r\n+    ?.split(\"=\")[1];\r\n+};\r\n \r\n const setCookie = (tokens) => {\r\n-    document.cookie = `=${tokens.token}; max-age=${\r\n+    document.cookie = `token=${tokens.token}; max-age=${\r\n         1 * 24 * 60 * 60\r\n     }`;\r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1756733219410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     ?.split(\"=\")[1];\r\n };\r\n \r\n const setCookie = (tokens) => {\r\n-    document.cookie = `token=${tokens.token}; max-age=${\r\n+    document.cookie = `Token=${tokens.token}; max-age=${\r\n         1 * 24 * 60 * 60\r\n     }`;\r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1756733619858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,11 @@\n     .find((token) => token.trim().split(\"=\")[0] === cookieName)\r\n     ?.split(\"=\")[1];\r\n };\r\n \r\n-const setCookie = (tokens) => {\r\n-    document.cookie = `Token=${tokens.token}; max-age=${\r\n-        1 * 24 * 60 * 60\r\n-    }`;\r\n-    \r\n-    \r\n-};\r\n+function setCookie(name, value) {\r\n+  const maxAge = 30 * 24 * 60 * 60;\r\n+  document.cookie = `${name}=${value}; max-age=${maxAge}; path=/`;\r\n+}\r\n \r\n \r\n export{getCookie,setCookie}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756733631996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,9 @@\n-const getCookie = (cookieName) => {\r\n-  return document.cookie\r\n-    .split(\";\")\r\n-    .find((token) => token.trim().split(\"=\")[0] === cookieName)\r\n-    ?.split(\"=\")[1];\r\n-};\r\n+function getCookie(name) {\r\n+  const value = `; ${document?.cookie}`;\r\n+  const parts = value?.split(`; ${name}=`);\r\n+  if (parts?.length === 2) return parts?.pop()?.split(\";\")?.shift();\r\n+}\r\n \r\n function setCookie(name, value) {\r\n   const maxAge = 30 * 24 * 60 * 60;\r\n   document.cookie = `${name}=${value}; max-age=${maxAge}; path=/`;\r\n"
+                }
+            ],
+            "date": 1756731629015,
+            "name": "Commit-0",
+            "content": "const  getCookie = (cookieName)=>{\r\n    return document.cookie\r\n    .split(\";\")\r\n    .find((token)=>token.trim().split(\"=\")[0]=== cookieName)\r\n    ?.split(\"=\")[1]\r\n}\r\n\r\nexport{getCookie}\r\n\r\nconst setCookie = (tokens) => {\r\n  document.cookie = `accessToken=${tokens.accessToken}; max-age=${\r\n    1 * 24 * 60 * 60\r\n  }`;"
+        }
+    ]
+}

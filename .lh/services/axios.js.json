@@ -1,0 +1,42 @@
+{
+    "sourceFile": "services/axios.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1756731880079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756732153175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n });\r\n \r\n \r\n api.interceptors.request.use((request)=>{\r\n-    const token = getCookie(\"a\")\r\n+    const token = getCookie(\"\")\r\n     if(token){\r\n         request.headers[\"Authorization\"] = `Bearer ${token}`\r\n     }\r\n     return request\r\n"
+                },
+                {
+                    "date": 1756732163602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n });\r\n \r\n \r\n api.interceptors.request.use((request)=>{\r\n-    const token = getCookie(\"\")\r\n+    const token = getCookie(\"toke\")\r\n     if(token){\r\n         request.headers[\"Authorization\"] = `Bearer ${token}`\r\n     }\r\n     return request\r\n"
+                },
+                {
+                    "date": 1756732473659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n });\r\n \r\n \r\n api.interceptors.request.use((request)=>{\r\n-    const token = getCookie(\"toke\")\r\n+    const token = getCookie(\"Token\")\r\n     if(token){\r\n         request.headers[\"Authorization\"] = `Bearer ${token}`\r\n     }\r\n     return request\r\n"
+                },
+                {
+                    "date": 1756734134883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n });\r\n \r\n \r\n api.interceptors.request.use((request)=>{\r\n-    const token = getCookie(\"Token\")\r\n+    const token = getCookie(\"token\")\r\n     if(token){\r\n         request.headers[\"Authorization\"] = `Bearer ${token}`\r\n     }\r\n     return request\r\n"
+                },
+                {
+                    "date": 1756734140204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n api.interceptors.request.use((request)=>{\r\n     const token = getCookie(\"token\")\r\n     if(token){\r\n-        request.headers[\"Authorization\"] = `Bearer ${token}`\r\n+        request.headers[\"Authorization\"] = `Bearer  ${token}`\r\n     }\r\n     return request\r\n },\r\n (error)=>{\r\n"
+                },
+                {
+                    "date": 1756734220124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n api.interceptors.request.use((request)=>{\r\n     const token = getCookie(\"token\")\r\n     if(token){\r\n-        request.headers[\"Authorization\"] = `Bearer  ${token}`\r\n+        request.headers[\"Authorization\"] = `Bearer ${token}`\r\n     }\r\n     return request\r\n },\r\n (error)=>{\r\n"
+                }
+            ],
+            "date": 1756731880079,
+            "name": "Commit-0",
+            "content": "import axios from \"axios\";\r\nimport setCookie from \"@/utils/cooki\";\r\nimport {\r\n  parseCookie,\r\n  parseSetCookie,\r\n} from \"next/dist/compiled/@edge-runtime/cookies\";\r\nimport { getCookie } from \"./cookie\";\r\n\r\nconst api = axios.create({\r\n  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,\r\n  headers: {\r\n    \"Content-Type\": \"application/json\",\r\n  },\r\n});\r\n\r\n\r\napi.interceptors.request.use((request)=>{\r\n    const token = getCookie(\"a\")\r\n    if(token){\r\n        request.headers[\"Authorization\"] = `Bearer ${token}`\r\n    }\r\n    return request\r\n},\r\n(error)=>{\r\n    return Promise.reject(error)\r\n})\r\n\r\nexport default api;\r\n"
+        }
+    ]
+}

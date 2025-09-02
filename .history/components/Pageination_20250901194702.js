@@ -1,0 +1,25 @@
+import React, { useState } from 'react'
+
+
+
+function Pageination() {
+    const [page,setPage] = useState(1)
+    const previousHandler = ()=>{
+        if(page<= 1) re
+        setPage((page)=> page - 1)
+
+    }
+    const nextHandler = ()=>{
+        setPage((page)=> page + 1)
+
+    }
+  return (
+    <div>
+        <button onClick={previousHandler}>previous</button>
+        {page}
+        <button onClick={nextHandler}>next</button>
+    </div>
+  )
+}
+
+export default Pageination

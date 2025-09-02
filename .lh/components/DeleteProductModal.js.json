@@ -1,0 +1,62 @@
+{
+    "sourceFile": "components/DeleteProductModal.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1756796679356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756799384975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import React from 'react'\r\n \r\n function DeleteProductModal() {\r\n   return (\r\n-    <div>DeleteProductModal</div>\r\n+    <div>\r\n+        \r\n+    </div>\r\n   )\r\n }\r\n \r\n export default DeleteProductModal\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756799391371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n-        \r\n+        for\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756799396735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \r\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n-        for\r\n+        <form>\r\n+            \r\n+        </form>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756799498147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import React from 'react'\r\n+import Image from 'next/image'\r\n \r\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n         <form>\r\n-            \r\n+\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799503633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n         <form>\r\n-\r\n+            <Image\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799508997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n         <form>\r\n-            <Image\r\n+            <Image src={} />\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799520065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n         <form>\r\n-            <Image src={} />\r\n+            <Image src=\"/Close\" />\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799525955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n         <form>\r\n-            <Image src=\"/Close\" />\r\n+            <Image src=\"/Close.png\" width={} />\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799534019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function DeleteProductModal() {\r\n   return (\r\n     <div>\r\n         <form>\r\n-            <Image src=\"/Close.png\" width={} />\r\n+            <Image src=\"/Close.png\" width={96} height={} />\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799550495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   return (\r\n     <div>\r\n         <form>\r\n             <Image src=\"/Close.png\" width={96} height={97.83} />\r\n+            <p></p>\r\n         </form>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756799583458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         <form>\r\n             <Image src=\"/Close.png\" width={96} height={97.83} />\r\n             <p>آیا از حذف این محصول مطمئنید؟</p>\r\n             <div>\r\n-                <button>pbt</button>\r\n+                <button>pb</button>\r\n             </div>\r\n         </form>\r\n     </div>\r\n   )\r\n"
+                }
+            ],
+            "date": 1756796679356,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction DeleteProductModal() {\r\n  return (\r\n    <div>DeleteProductModal</div>\r\n  )\r\n}\r\n\r\nexport default DeleteProductModal"
+        }
+    ]
+}

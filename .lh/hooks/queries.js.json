@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 51,
+            "activePatchIndex": 63,
             "patches": [
                 {
                     "date": 1756647512980,
@@ -212,6 +212,54 @@
                 {
                     "date": 1756647922214,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,5 +25,5 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n \r\n-export {use}\n\\ No newline at end of file\n+export {useFetchProducts,useAddProducts,use}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746202728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,6 +24,7 @@\n     }\r\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n+const \r\n \r\n\\ No newline at end of file\n-export {useFetchProducts,useAddProducts,use}\n+export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746208042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     }\r\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n-const \r\n+const page\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746214564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     }\r\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n-const page\r\n+const pageInation\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746221387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     }\r\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n-const pageInation\r\n+const usepageInationPage\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746227412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,7 @@\n     }\r\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n-const usepageInationPage\r\n+const usePageInationPage \r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746236214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,9 @@\n     }\r\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n-const usePageInationPage \r\n+const usePageInationPage = ()=>{\r\n+  \r\n+}\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746244467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n const usePageInationPage = ()=>{\r\n-  \r\n+  const \r\n }\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746255054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n const usePageInationPage = ()=>{\r\n-  const \r\n+  const fetchPageinationProducts\r\n }\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746260313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n const usePageInationPage = ()=>{\r\n-  const fetchPageinationProducts\r\n+  const fetchPageinationProducts = async()\r\n }\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746267061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,10 @@\n     return useQuery([\"products\",name],fetchSearchProducts)\r\n \r\n }\r\n const usePageInationPage = ()=>{\r\n-  const fetchPageinationProducts = async()\r\n+  const fetchPageinationProducts = async()=>{\r\n+    const \r\n+  }\r\n }\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746275715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \r\n }\r\n const usePageInationPage = ()=>{\r\n   const fetchPageinationProducts = async()=>{\r\n-    const res = await api\r\n+    const res = await api.\r\n   }\r\n }\r\n \r\n export {useFetchProducts,useAddProducts,useSearchProducts}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746419845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \r\n }\r\n const usePageInationPage = (page)=>{\r\n   const fetchPageinationProducts = async()=>{\r\n-    const res = await api.get(\"products?page=${page}&limit=10\")\r\n+    const res = await api.get(`products?page=${page}&limit=10\")\r\n     return res.data\r\n   }\r\n   return useQuery([products])\r\n }\r\n"
                 }
             ],
             "date": 1756647512980,

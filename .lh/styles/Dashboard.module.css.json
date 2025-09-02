@@ -1,0 +1,266 @@
+{
+    "sourceFile": "styles/Dashboard.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 62,
+            "patches": [
+                {
+                    "date": 1756713846412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756713864433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,5 +123,7 @@\n .td4{\r\n     padding-right: 122px;\r\n     \r\n }\r\n-\r\n+.edit{\r\n+  pa\r\n+}\r\n"
+                },
+                {
+                    "date": 1756713880296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,6 +124,6 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  pa\r\n+  \r\n }\r\n"
+                },
+                {
+                    "date": 1756713908736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,6 +124,6 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  \r\n+  ma-left: ;\r\n }\r\n"
+                },
+                {
+                    "date": 1756713918170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,6 +124,6 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  ma-left: ;\r\n+  margin-left: ;\r\n }\r\n"
+                },
+                {
+                    "date": 1756714074285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,6 +124,9 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  margin-left: ;\r\n+  margin-left:73px ;\r\n }\r\n+.btnedit{\r\n+  ba\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714085035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,6 +127,6 @@\n .edit{\r\n   margin-left:73px ;\r\n }\r\n .btnedit{\r\n-  ba\r\n+  background-color: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714098848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,8 +125,9 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n+  ba\r\n }\r\n .btnedit{\r\n-  background-color: ;\r\n+  background-color: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714114140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n-  ba\r\n+  background:none ;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714121313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n-  background:none ;\r\n+  \r\n }\r\n .btnedit{\r\n   background-color: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714180955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n-  \r\n+  border: ;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714190117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,10 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n-  border: ;\r\n+  border: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n+  border: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714217902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,6 +129,7 @@\n   border: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n-  border: ;\r\n+  border: none;\r\n+  background-color: rgba(74, 222, 128, 1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714223621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,6 +130,5 @@\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n-  background-color: rgba(74, 222, 128, 1);\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714231366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,5 +130,6 @@\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n+  /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714244737,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,9 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  margin-left:73px ;\r\n+  /* margin-left:73px ; */\r\n   border: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n"
+                },
+                {
+                    "date": 1756714255384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,8 +126,9 @@\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n   border: none;\r\n+  \r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714261866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n   border: none;\r\n-  \r\n+  background: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714274560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n   border: none;\r\n-  background: none;\r\n+  background-color: ;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714324928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,11 +126,12 @@\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n   border: none;\r\n-  background-color: ;\r\n+  background-color: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n+  \r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714332835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,7 +131,7 @@\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n-  \r\n+  bo\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714340868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,7 +131,7 @@\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n-  bo\r\n+  border:  1px solid rgba(74, 222, 128, 1);\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714353062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n-  border: none;\r\n+  /* border: none; */\r\n   background-color: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n"
+                },
+                {
+                    "date": 1756714383020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,10 @@\n     \r\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n-  /* border: none; */\r\n+  pa\r\n+  border: none;\r\n   background-color: none;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n"
+                },
+                {
+                    "date": 1756714394664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n .edit{\r\n   /* margin-left:73px ; */\r\n-  pa\r\n+  \r\n   border: none;\r\n   background-color: none;\r\n }\r\n .btnedit{\r\n"
+                },
+                {
+                    "date": 1756714420036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,12 +124,12 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  /* margin-left:73px ; */\r\n+  margin-left:73px ;\r\n   \r\n   border: none;\r\n-  background-color: none;\r\n+  /* background-color: none; */\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714432909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,8 +128,9 @@\n   margin-left:73px ;\r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n+  color: ;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714440508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,9 +128,9 @@\n   margin-left:73px ;\r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n-  color: ;\r\n+  color: none ;\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714447047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,9 +128,9 @@\n   margin-left:73px ;\r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n-  color: none ;\r\n+  ba\r\n }\r\n .btnedit{\r\n   background-color: none;\r\n   border: none;\r\n"
+                },
+                {
+                    "date": 1756714454989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,11 +128,11 @@\n   margin-left:73px ;\r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n-  ba\r\n }\r\n .btnedit{\r\n+  background: none;\r\n   background-color: none;\r\n   border: none;\r\n   border:  1px solid rgba(74, 222, 128, 1);\r\n   /* color: rgba(74, 222, 128, 1); */\r\n"
+                },
+                {
+                    "date": 1756714463774,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,7 +133,7 @@\n .btnedit{\r\n   background: none;\r\n   background-color: none;\r\n   border: none;\r\n-  border:  1px solid rgba(74, 222, 128, 1);\r\n+  /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714525526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,8 +125,9 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n+  p\r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n }\r\n"
+                },
+                {
+                    "date": 1756714535315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n-  p\r\n+  padding-top: 18PX;\r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n }\r\n"
+                },
+                {
+                    "date": 1756714543709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,10 +125,10 @@\n     \r\n }\r\n .edit{\r\n   margin-left:73px ;\r\n-  padding-top: 18PX;\r\n   \r\n+  \r\n   border: none;\r\n   /* background-color: none; */\r\n }\r\n .btnedit{\r\n"
+                },
+                {
+                    "date": 1756714549758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -134,7 +134,8 @@\n .btnedit{\r\n   background: none;\r\n   background-color: none;\r\n   border: none;\r\n+  padding-top: 18px;\r\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714560938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,9 @@\n     padding-right: 122px;\r\n     \r\n }\r\n .edit{\r\n-  margin-left:73px ;\r\n+\r\n   \r\n   \r\n   border: none;\r\n   /* background-color: none; */\r\n"
+                },
+                {
+                    "date": 1756714577565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,16 +123,11 @@\n .td4{\r\n     padding-right: 122px;\r\n     \r\n }\r\n-.edit{\r\n \r\n-  \r\n-  \r\n-  border: none;\r\n-  /* background-color: none; */\r\n-}\r\n .btnedit{\r\n+    margin-left:73px ;\r\n   background: none;\r\n   background-color: none;\r\n   border: none;\r\n   padding-top: 18px;\r\n"
+                },
+                {
+                    "date": 1756714586911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,6 +131,7 @@\n   background-color: none;\r\n   border: none;\r\n   padding-top: 18px;\r\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n+  \r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714594118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,7 +131,7 @@\n   background-color: none;\r\n   border: none;\r\n   padding-top: 18px;\r\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n-  \r\n+  cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n\\ No newline at end of file\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1756714651814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,5 +133,6 @@\n   padding-top: 18px;\r\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n-}\n\\ No newline at end of file\n+}\r\n+.b\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714852432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -134,5 +134,5 @@\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n-.b\n\\ No newline at end of file\n+.fele\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714857908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -134,5 +134,7 @@\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n-.fele\n\\ No newline at end of file\n+.flex1{\r\n+  \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714863755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,6 +135,6 @@\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n .flex1{\r\n-  \r\n+  display: flex;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714890503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n \r\n .btnedit{\r\n-    margin-left:73px ;\r\n+    /* margin-left:73px ; */\r\n   background: none;\r\n   background-color: none;\r\n   border: none;\r\n   padding-top: 18px;\r\n"
+                },
+                {
+                    "date": 1756714905948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n     \r\n }\r\n \r\n .btnedit{\r\n-    /* margin-left:73px ; */\r\n+    margin-left:73px ;\r\n   background: none;\r\n   background-color: none;\r\n   border: none;\r\n   padding-top: 18px;\r\n@@ -136,5 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n .flex1{\r\n   display: flex;\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714919311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n .flex1{\r\n   display: flex;\r\n-  \r\n+  justify-content: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714926486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n .flex1{\r\n   display: flex;\r\n-  justify-content: ;\r\n+  justify-content: space-between;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756714967887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,7 +135,7 @@\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n }\r\n .flex1{\r\n-  display: flex;\r\n-  justify-content: space-between;\r\n+  \r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715060370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,8 +133,9 @@\n   padding-top: 18px;\r\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n+  display: ;\r\n }\r\n .flex1{\r\n   \r\n   \r\n"
+                },
+                {
+                    "date": 1756715110354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -133,10 +133,7 @@\n   padding-top: 18px;\r\n   /* border:  1px solid rgba(74, 222, 128, 1); */\r\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n-  display: ;\r\n+  display: flex;\r\n }\r\n-.flex1{\r\n-  \r\n-  \r\n\\ No newline at end of file\n-}\n+.btndel\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715122795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -135,5 +135,7 @@\n   cursor: pointer;\r\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n-.btndel\n\\ No newline at end of file\n+.btndel{\r\n+  pa\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715147932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  pa\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715162586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  \r\n+  ,ma\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715170835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  ,ma\r\n+  margin-left: 70px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715179590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  margin-left: 70px;\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715193882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  \r\n+  pa\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715203273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  pa\r\n+  padding-right: 14px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715214198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n-  padding-right: 14px;\r\n+ \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715301534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,6 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n- \r\n+ ba\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715309031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -136,6 +136,7 @@\n   /* color: rgba(74, 222, 128, 1); */\r\n   display: flex;\r\n }\r\n .btndel{\r\n- ba\r\n+ background: none;\r\n+ border: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715316827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -137,6 +137,7 @@\n   display: flex;\r\n }\r\n .btndel{\r\n  background: none;\r\n- border: ;\r\n+ border: none;\r\n+ pa\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715326438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -138,6 +138,6 @@\n }\r\n .btndel{\r\n  background: none;\r\n  border: none;\r\n- pa\r\n+ padding-right: 14px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756715342149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,5 +139,6 @@\n .btndel{\r\n  background: none;\r\n  border: none;\r\n  padding-right: 14px;\r\n+ cursor: pointer;\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1756713846412,
+            "name": "Commit-0",
+            "content": ".search {\r\n  width: 1140px;\r\n  height: 68px;\r\n  border-radius: 15px;\r\n  margin-right: 150px;\r\n  margin-left: 150px;\r\n  margin-top: 28px;\r\n  margin-bottom: 41px;\r\n}\r\n.icon_search {\r\n  position: absolute;\r\n  /* left: 1092px; */\r\n  /* right: 22px; */\r\n  right: 174px;\r\n  top: 50px;\r\n  /* padding-top: 22px; */\r\n  /* padding-right: 22px; */\r\n  /* padding-bottom: 22px; */\r\n  /* padding-left: 1092px; */\r\n}\r\n.search::placeholder {\r\n  width: 70px;\r\n  padding-right: 50px;\r\n}\r\n.flex {\r\n  display: flex;\r\n}\r\n.icon {\r\n  margin-right: 150px;\r\n  margin-top: 41px;\r\n  /* margin-left: 6px;/ */\r\n}\r\n.title {\r\n  margin-top: 41px;\r\n  margin-right: 6px;\r\n  margin-left: 862px;\r\n  /* margin-bottom: 24.36px; */\r\n  line-height: 100%;\r\n}\r\n.addproduct {\r\n  margin-left: 150px;\r\n  margin-top: 42px;\r\n  width: 132px;\r\n  height: 45px;\r\n  cursor: pointer;\r\n  background-color: rgba(85, 163, 240, 1);\r\n  color: rgba(255, 255, 255, 1);\r\n  font-weight: 400;\r\n  font-size: 16px;\r\n  text-align: right;\r\n  border: none;\r\n  border-radius: 10px;\r\n  padding-right: 17px;\r\n  padding-left: 17px;\r\n  padding-bottom: 10px;\r\n  padding-top: 10px;\r\n}\r\n\r\n.trr {\r\n  width: 1140px;\r\n  height: 70px;\r\n  background-color: rgba(242, 242, 242, 1);\r\n  margin-right: 150px;\r\n  border-top-left-radius: 30px;\r\n  border-top-right-radius: 30px;\r\n  margin-top: 24px;\r\n  margin-left: 150px;\r\n}\r\n.th1 {\r\n  width: 46px;\r\n  padding-right: 32px;\r\n  white-space: nowrap;\r\n  padding-top: 25px;\r\n  padding-bottom: 23px;\r\n  \r\n}\r\n.th2 {\r\n  padding-right: 150px;\r\n  width: 57px;\r\n  padding-top: 25px;\r\n  padding-bottom: 23px;\r\n  \r\n}\r\n.th3 {\r\n  padding-right: 150px;\r\n  padding-top: 25px;\r\n  padding-bottom: 23px;\r\n  \r\n}\r\n.th4 {\r\n  padding-right: 150px;\r\n  padding-left: 428px;\r\n  padding-top: 25px;\r\n  padding-bottom: 23px;\r\n  \r\n}\r\n.tr2{\r\n    width: 1140px;\r\n    background-color: rgba(255, 255, 255, 1);\r\n    \r\n}\r\n.td1{\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    text-align: right;\r\n    white-space: nowrap ;\r\n    padding-right: 52px;\r\n    padding-top:16 ;\r\n    padding-left: 52px;\r\n\r\n}\r\n.td2{\r\n    padding-right: 104px;\r\n    padding-top: 18px;\r\n    padding-bottom: 15px;\r\n    \r\n\r\n}\r\n.td3{\r\n    padding-right: 185px;\r\n    white-space: nowrap;\r\n}\r\n.td4{\r\n    padding-right: 122px;\r\n    \r\n}\r\n\r\n"
+        }
+    ]
+}

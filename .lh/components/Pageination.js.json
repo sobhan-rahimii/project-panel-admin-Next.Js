@@ -1,0 +1,298 @@
+{
+    "sourceFile": "components/Pageination.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 70,
+            "patches": [
+                {
+                    "date": 1756742897079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1756742904443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import React from 'react'\r\n \r\n-type Props = {}\r\n \r\n+\r\n function Pageination({}: Props) {\r\n   return (\r\n     <div>Pageination</div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756742910285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n \r\n \r\n \r\n-function Pageination({}: Props) {\r\n+function Pageination() {\r\n   return (\r\n     <div>Pageination</div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756742922159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,13 @@\n \r\n \r\n \r\n function Pageination() {\r\n+    c\r\n   return (\r\n-    <div>Pageination</div>\r\n+    <div>\r\n+\r\n+    </div>\r\n   )\r\n }\r\n \r\n export default Pageination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756742927497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n \r\n \r\n function Pageination() {\r\n-    c\r\n+    const page\r\n   return (\r\n     <div>\r\n \r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756742937648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-import React from 'react'\r\n+import React, { useState } from 'react'\r\n \r\n \r\n \r\n function Pageination() {\r\n-    const page\r\n+    const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n \r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756742951704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-\r\n+        {P}\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743154597,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        {P}\r\n+        <button\r\n+        {page}\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743170895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button\r\n+        <button>pre</button>\r\n         {page}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756743177797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button>pre</button>\r\n+        <button>previo</button>\r\n         {page}\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756743185130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,11 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button>previo</button>\r\n+        <button>previous</button>\r\n         {page}\r\n+        <button></button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743191804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button>previous</button>\r\n+        <button >previous</button>\r\n         {page}\r\n-        <button></button>\r\n+        <button>next</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743197604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button >previous</button>\r\n+        <button onClick={}}>previous</button>\r\n         {page}\r\n         <button>next</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756743204124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button onClick={}}>previous</button>\r\n+        <button onClick={previous}>previous</button>\r\n         {page}\r\n         <button>next</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756743210577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,11 @@\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n   return (\r\n     <div>\r\n-        <button onClick={previous}>previous</button>\r\n+        <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n-        <button>next</button>\r\n+        <button >next</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743215783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n-        <button >next</button>\r\n+        <button onClick={}>next</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743221834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n-        <button onClick={}>next</button>\r\n+        <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756743228054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n+    \r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n"
+                },
+                {
+                    "date": 1756743236634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n-    \r\n+    const previousHandler = \r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n"
+                },
+                {
+                    "date": 1756743242655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n \r\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n-    const previousHandler = \r\n+    const previousHandler = ()=>{\r\n+        \r\n+    }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n"
+                },
+                {
+                    "date": 1756743258472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n-        \r\n+\r\n     }\r\n+    const next\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n"
+                },
+                {
+                    "date": 1756743263934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n \r\n     }\r\n-    const next\r\n+    const nextHandler = ()=>{}\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n"
+                },
+                {
+                    "date": 1756743290181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n+        setPage()\r\n \r\n     }\r\n     const nextHandler = ()=>{}\r\n   return (\r\n"
+                },
+                {
+                    "date": 1756743299079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n-        setPage()\r\n+        setPage((page)=> page + 1)\r\n \r\n     }\r\n     const nextHandler = ()=>{}\r\n   return (\r\n"
+                },
+                {
+                    "date": 1756743306973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n-        setPage((page)=> page + 1)\r\n+        setPage((page)=> page - 1)\r\n \r\n     }\r\n     const nextHandler = ()=>{}\r\n   return (\r\n"
+                },
+                {
+                    "date": 1756743318506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,12 @@\n     const previousHandler = ()=>{\r\n         setPage((page)=> page - 1)\r\n \r\n     }\r\n-    const nextHandler = ()=>{}\r\n+    const nextHandler = ()=>{\r\n+        setPage((page)=> page - 1)\r\n+\r\n+    }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         {page}\r\n"
+                },
+                {
+                    "date": 1756743415455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,14 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n+        if(page)\r\n         setPage((page)=> page - 1)\r\n \r\n     }\r\n     const nextHandler = ()=>{\r\n-        setPage((page)=> page - 1)\r\n+        setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n     <div>\r\n"
+                },
+                {
+                    "date": 1756743421632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n-        if(page)\r\n+        if(page<= 1)\r\n         setPage((page)=> page - 1)\r\n \r\n     }\r\n     const nextHandler = ()=>{\r\n"
+                },
+                {
+                    "date": 1756743546798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,14 @@\n \r\n function Pageination() {\r\n     const [page,setPage] = useState(1)\r\n     const previousHandler = ()=>{\r\n-        if(page<= 1)\r\n+        if(page<= 1) return\r\n         setPage((page)=> page - 1)\r\n \r\n     }\r\n     const nextHandler = ()=>{\r\n+        if(page > = 3)\r\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n"
+                },
+                {
+                    "date": 1756743553019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         setPage((page)=> page - 1)\r\n \r\n     }\r\n     const nextHandler = ()=>{\r\n-        if(page > = 3)\r\n+        if(page >= 3) return\r\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n"
+                },
+                {
+                    "date": 1756743598504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        {page}\r\n+        \r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756743607576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        \r\n+        <p>1</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756743613257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p>1</p>\r\n+        <p>2</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756743619010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p>1</p>\r\n         <p>2</p>\r\n+        <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756743696931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p>1</p>\r\n+        <p >1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743702894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p >1</p>\r\n+        <p style={{}}>1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743709717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{}}>1</p>\r\n+        <p style={{color}}>1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743719127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color}}>1</p>\r\n+        <p style={{color: page === 1 }}>1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743724799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 }}>1</p>\r\n+        <p style={{color: page === 1 ? blue}}>1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743732420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 ? blue}}>1</p>\r\n+        <p style={{color: page === 1 ? blue :i}}>1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743737451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 ? blue :i}}>1</p>\r\n+        <p style={{color: page === 1 ? blue :'inherit'}}>1</p>\r\n         <p>2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756743768883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? blue :'inherit'}}>1</p>\r\n-        <p>2</p>\r\n+        <p  >2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756743774961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? blue :'inherit'}}>1</p>\r\n-        <p  >2</p>\r\n+        <p style={{color: page === 2 ? blue :'inherit'}} >2</p>\r\n         <p>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756743780465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? blue :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? blue :'inherit'}} >2</p>\r\n-        <p>3</p>\r\n+        <p style={{color: page === 3 ? blue :'inherit'}}>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756744157437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 ? blue :'inherit'}}>1</p>\r\n+        <p style={{color: page === 1 ? \"blue :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? blue :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? blue :'inherit'}}>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756744190006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n     }\r\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 ? \"blue :'inherit'}}>1</p>\r\n-        <p style={{color: page === 2 ? blue :'inherit'}} >2</p>\r\n+        <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n+        <p style={{color: page === 2 ? blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? blue :'inherit'}}>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756744195981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n   return (\r\n     <div>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n-        <p style={{color: page === 2 ? blue\" :'inherit'}} >2</p>\r\n-        <p style={{color: page === 3 ? blue :'inherit'}}>3</p>\r\n+        <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n+        <p style={{color: page === 3 ? \"blue :'inherit'}}>3</p>\r\n         <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756746764556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import React, { useState } from 'react'\r\n+\r\n+\r\n+\r\n+function Pageination() {\r\n+    \r\n+    const previousHandler = ()=>{\r\n+        if(page<= 1) return\r\n+        setPage((page)=> page - 1)\r\n+\r\n+    }\r\n+    const nextHandler = ()=>{\r\n+        if(page >= 3) return\r\n+        setPage((page)=> page + 1)\r\n+\r\n+    }\r\n+  return (\r\n+    <div>\r\n+        <button onClick={previousHandler}>previous</button>\r\n+        <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n+        <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n+        <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n+        <button onClick={nextHandler}>next</button>\r\n+    </div>\r\n+  )\r\n+}\r\n+\r\n+export default Pageination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746770927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from 'react'\r\n \r\n \r\n \r\n-function Pageination() {\r\n+function Pageination({page}) {\r\n     \r\n     const previousHandler = ()=>{\r\n         if(page<= 1) return\r\n         setPage((page)=> page - 1)\r\n@@ -24,33 +24,5 @@\n     </div>\r\n   )\r\n }\r\n \r\n-export default Pageination\n-import React, { useState } from 'react'\r\n-\r\n-\r\n-\r\n-function Pageination() {\r\n-    const [page,setPage] = useState(1)\r\n-    const previousHandler = ()=>{\r\n-        if(page<= 1) return\r\n-        setPage((page)=> page - 1)\r\n-\r\n-    }\r\n-    const nextHandler = ()=>{\r\n-        if(page >= 3) return\r\n-        setPage((page)=> page + 1)\r\n-\r\n-    }\r\n-  return (\r\n-    <div>\r\n-        <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n-        <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n-        <p style={{color: page === 3 ? \"blue :'inherit'}}>3</p>\r\n-        <button onClick={nextHandler}>next</button>\r\n-    </div>\r\n-  )\r\n-}\r\n-\r\n export default Pageination\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1756746776928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from 'react'\r\n \r\n \r\n \r\n-function Pageination({page}) {\r\n+function Pageination({page,setPa}) {\r\n     \r\n     const previousHandler = ()=>{\r\n         if(page<= 1) return\r\n         setPage((page)=> page - 1)\r\n"
+                },
+                {
+                    "date": 1756751041662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React, { useState } from 'react'\r\n \r\n \r\n \r\n-function Pageination({page,setPa}) {\r\n+function Pageination({page,setPage}) {\r\n     \r\n     const previousHandler = ()=>{\r\n         if(page<= 1) return\r\n         setPage((page)=> page - 1)\r\n@@ -14,9 +14,9 @@\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n-    <div>\r\n+    <div className=''>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n"
+                },
+                {
+                    "date": 1756751047478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n-    <div className=''>\r\n+    <div className={stylr}>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n"
+                },
+                {
+                    "date": 1756751052741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n-    <div className={stylr}>\r\n+    <div className={st}>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n"
+                },
+                {
+                    "date": 1756751087474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React, { useState } from 'react'\r\n+import sty\r\n \r\n \r\n \r\n function Pageination({page,setPage}) {\r\n@@ -14,9 +15,9 @@\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n-    <div className={st}>\r\n+    <div className={sty}>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n"
+                },
+                {
+                    "date": 1756751093423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from 'react'\r\n-import sty\r\n+import styles from \"../\"\r\n \r\n \r\n \r\n function Pageination({page,setPage}) {\r\n"
+                },
+                {
+                    "date": 1756751105250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from 'react'\r\n-import styles from \"../\"\r\n+import styles from \"../styles/Pagination.module.css\"\r\n \r\n \r\n \r\n function Pageination({page,setPage}) {\r\n"
+                },
+                {
+                    "date": 1756751110978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n-    <div className={sty}>\r\n+    <div className={styles.}>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n"
+                },
+                {
+                    "date": 1756751149112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,14 @@\n         setPage((page)=> page + 1)\r\n \r\n     }\r\n   return (\r\n-    <div className={styles.}>\r\n+    <div className={styles.flex}>\r\n+        <button onClick={nextHandler}>next</button>\r\n         <button onClick={previousHandler}>previous</button>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n-        <button onClick={nextHandler}>next</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756751162354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n-        <button onClick={previousHandler}>previous</button>\r\n-        <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n+        <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n+        <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756751420401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,10 +17,10 @@\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n+        <p  style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n-        <p style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756751426991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n-        <p  style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n+        <p className={styles.} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756751435072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n-        <p className={styles.} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n+        <p className={styles.pag3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756751440586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n-        <p className={styles.pag3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n+        <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1756751446214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n-        <p style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n+        <p className='' style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756751452012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   return (\r\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n-        <p className='' style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n+        <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n"
+                },
+                {
+                    "date": 1756751457616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n-        <p style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n+        <p className='' style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756751462926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     <div className={styles.flex}>\r\n         <button onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n-        <p className='' style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n+        <p className={styles.page1} style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1756751751417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <button onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p className={styles.page1} style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n-        <button onClick={previousHandler}>previous</button>\r\n+        <button className='' onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756751757535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <button onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p className={styles.page1} style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n-        <button className='' onClick={previousHandler}>previous</button>\r\n+        <button className={styles.per} onClick={previousHandler}>previous</button>\r\n     </div>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1756751830811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n-        <button onClick={nextHandler}>next</button>\r\n+        <button  onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p className={styles.page1} style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button className={styles.per} onClick={previousHandler}>previous</button>\r\n"
+                },
+                {
+                    "date": 1756751842893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n     }\r\n   return (\r\n     <div className={styles.flex}>\r\n-        <button  onClick={nextHandler}>next</button>\r\n+        <button className={styles.next} onClick={nextHandler}>next</button>\r\n         <p className={styles.page3} style={{color: page === 3 ? \"blue\" :'inherit'}}>3</p>\r\n         <p className={styles.page2} style={{color: page === 2 ? \"blue\" :'inherit'}} >2</p>\r\n         <p className={styles.page1} style={{color: page === 1 ? \"blue\" :'inherit'}}>1</p>\r\n         <button className={styles.per} onClick={previousHandler}>previous</button>\r\n"
+                }
+            ],
+            "date": 1756742897079,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\ntype Props = {}\r\n\r\nfunction Pageination({}: Props) {\r\n  return (\r\n    <div>Pageination</div>\r\n  )\r\n}\r\n\r\nexport default Pageination"
+        }
+    ]
+}

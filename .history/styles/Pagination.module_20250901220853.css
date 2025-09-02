@@ -1,0 +1,30 @@
+.flex{
+    display: flex;
+    width: 170px;
+    height: 45px;
+    margin-left: 654px;
+    margin-right: 654.54px;
+    margin-top: 26px;
+}
+.page1{
+    width: 35px;
+    height: 35px;
+
+    border-radius: 42px;
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+.per{
+    width: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: aqua;
+}
+.next{
+    width: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: aquamarine
+    ;
+}

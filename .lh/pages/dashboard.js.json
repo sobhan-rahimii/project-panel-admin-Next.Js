@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 31,
+            "activePatchIndex": 97,
             "patches": [
                 {
                     "date": 1756646098956,
@@ -132,6 +132,270 @@
                 {
                     "date": 1756712983844,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n               <th className={styles.th4}>شناسه کالا</th>\r\n               <th></th>\r\n             </tr>\r\n           </tbody>\r\n-          {(search?products?.data:data?)map((p) => (\r\n+          {(search?products?.data:data?.data)?>map((p) => (\r\n             <tr className={styles.tr2}>\r\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n"
+                },
+                {
+                    "date": 1756713750738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,14 +73,15 @@\n               <th className={styles.th4}>شناسه کالا</th>\r\n               <th></th>\r\n             </tr>\r\n           </tbody>\r\n-          {(search?products?.data:data?.data)?>map((p) => (\r\n+          {(search?products?.data:data?.data)?.map((p) => (\r\n             <tr className={styles.tr2}>\r\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n+              \r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713756475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              \r\n+              <td> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713763412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td> </td>\r\n+              <td> <Image </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713769822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td> <Image </td>\r\n+              <td> <Image src /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713790217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td> <Image src /> </td>\r\n+              <td> <Image src=\"/edit.png\" /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713798936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td> <Image src=\"/edit.png\" /> </td>\r\n+              <td> <Image src=\"/edit.png\" width={} /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713807409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td> <Image src=\"/edit.png\" width={} /> </td>\r\n+              <td> <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713829218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td> <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n+              <td>  className <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713837396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td>  className <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n+              <td>  className={styles.edit} <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713974848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td>  className={styles.edit} <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n+              <td>   <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756713988697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,15 +73,23 @@\n               <th className={styles.th4}>شناسه کالا</th>\r\n               <th></th>\r\n             </tr>\r\n           </tbody>\r\n-          {(search?products?.data:data?.data)?.map((p) => (\r\n+          {(search ? products?.data : data?.data)?.map((p) => (\r\n             <tr className={styles.tr2}>\r\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td>   <Image src=\"/edit.png\" width={25} height={25} /> </td>\r\n+              <td>\r\n+                {\" \"}\r\n+                <Image\r\n+                  className={styles.edit}\r\n+                  src=\"/edit.png\"\r\n+                  width={25}\r\n+                  height={25}\r\n+                />\r\n+              </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756714018275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                {\" \"}\r\n+                \r\n                 <Image\r\n                   className={styles.edit}\r\n                   src=\"/edit.png\"\r\n                   width={25}\r\n"
+                },
+                {
+                    "date": 1756714025088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n                 \r\n-                <Image\r\n+                <button></button><Image\r\n                   className={styles.edit}\r\n                   src=\"/edit.png\"\r\n                   width={25}\r\n                   height={25}\r\n"
+                },
+                {
+                    "date": 1756714030934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,9 +81,9 @@\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n                 \r\n-                <button></button><Image\r\n+                <button><Image\r\n                   className={styles.edit}\r\n                   src=\"/edit.png\"\r\n                   width={25}\r\n                   height={25}\r\n"
+                },
+                {
+                    "date": 1756714036435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,15 +80,16 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                \r\n-                <button><Image\r\n-                  className={styles.edit}\r\n-                  src=\"/edit.png\"\r\n-                  width={25}\r\n-                  height={25}\r\n-                />\r\n+                <button>\r\n+                  <Image\r\n+                    className={styles.edit}\r\n+                    src=\"/edit.png\"\r\n+                    width={25}\r\n+                    height={25}\r\n+                  />\r\n+                </button>\r\n               </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n"
+                },
+                {
+                    "date": 1756714048596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                <button>\r\n+                <button >\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n                     width={25}\r\n"
+                },
+                {
+                    "date": 1756714058418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,9 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                <button >\r\n+                <button className={styles.btn}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n                     width={25}\r\n"
+                },
+                {
+                    "date": 1756714149762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,13 +80,13 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                <button className={styles.btn}>\r\n+                <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n-                    width={25}\r\n+                    width={20}\r\n                     height={25}\r\n                   />\r\n                 </button>\r\n               </td>\r\n"
+                },
+                {
+                    "date": 1756714477425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,11 +85,12 @@\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n                     width={20}\r\n-                    height={25}\r\n+                    height={20}\r\n                   />\r\n                 </button>\r\n+                \r\n               </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n"
+                },
+                {
+                    "date": 1756714490450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,13 @@\n                     width={20}\r\n                     height={20}\r\n                   />\r\n                 </button>\r\n-                \r\n+                <td>\r\n+                  <button>\r\n+                    \r\n+                  </button>\r\n+                </td>\r\n               </td>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n"
+                },
+                {
+                    "date": 1756714662474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n                   />\r\n                 </button>\r\n                 <td>\r\n                   <button>\r\n-                    \r\n+                    <Imag e/>\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756714669693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n                   />\r\n                 </button>\r\n                 <td>\r\n                   <button>\r\n-                    <Imag e/>\r\n+                    <Image src=} />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756714677816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n                   />\r\n                 </button>\r\n                 <td>\r\n                   <button>\r\n-                    <Image src=} />\r\n+                    <Image src=\"/trash\" />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756714685341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,10 +89,10 @@\n                     height={20}\r\n                   />\r\n                 </button>\r\n                 <td>\r\n-                  <button>\r\n-                    <Image src=\"/trash\" />\r\n+                  <button className=\"\">\r\n+                    <Image src=\"/trash.png\" />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756714691315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,9 +89,9 @@\n                     height={20}\r\n                   />\r\n                 </button>\r\n                 <td>\r\n-                  <button className=\"\">\r\n+                  <button className={styles.btndel}>\r\n                     <Image src=\"/trash.png\" />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n"
+                },
+                {
+                    "date": 1756714697174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n                   />\r\n                 </button>\r\n                 <td>\r\n                   <button className={styles.btndel}>\r\n-                    <Image src=\"/trash.png\" />\r\n+                    <Image src=\"/trash.png\"  />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756714703724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n                   />\r\n                 </button>\r\n                 <td>\r\n                   <button className={styles.btndel}>\r\n-                    <Image src=\"/trash.png\"  />\r\n+                    <Image src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756714725155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,8 +80,9 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n+                d\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n"
+                },
+                {
+                    "date": 1756714732565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,11 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                d\r\n+                <div>\r\n+                  \r\n+                </div>\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n"
+                },
+                {
+                    "date": 1756714774232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,10 +80,11 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n+                \r\n                 <div>\r\n-                  \r\n+\r\n                 </div>\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n"
+                },
+                {
+                    "date": 1756714779841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,11 +81,8 @@\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n                 \r\n-                <div>\r\n-\r\n-                </div>\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n"
+                },
+                {
+                    "date": 1756714810354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -80,9 +80,11 @@\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n               <td>\r\n-                \r\n+                <div>\r\n+                  \r\n+                </div>\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n"
+                },
+                {
+                    "date": 1756714817880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,11 +79,11 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <td>\r\n                 <div>\r\n-                  \r\n+                  <td>\r\n+\r\n                 </div>\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n"
+                },
+                {
+                    "date": 1756714825994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,8 @@\n               <td className={styles.td4}>{p.id}</td>\r\n                 <div>\r\n                   <td>\r\n \r\n-                </div>\r\n                 <button className={styles.btnedit}>\r\n                   <Image\r\n                     className={styles.edit}\r\n                     src=\"/edit.png\"\r\n@@ -97,8 +96,9 @@\n                     <Image src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                 </td>\r\n               </td>\r\n+                </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756714835631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,26 +79,25 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-                <div>\r\n-                  <td>\r\n-\r\n-                <button className={styles.btnedit}>\r\n-                  <Image\r\n-                    className={styles.edit}\r\n-                    src=\"/edit.png\"\r\n-                    width={20}\r\n-                    height={20}\r\n-                  />\r\n-                </button>\r\n+              <div className=\"\">\r\n                 <td>\r\n-                  <button className={styles.btndel}>\r\n-                    <Image src=\"/trash.png\" width={20} height={20} />\r\n+                  <button className={styles.btnedit}>\r\n+                    <Image\r\n+                      className={styles.edit}\r\n+                      src=\"/edit.png\"\r\n+                      width={20}\r\n+                      height={20}\r\n+                    />\r\n                   </button>\r\n+                  <td>\r\n+                    <button className={styles.btndel}>\r\n+                      <Image src=\"/trash.png\" width={20} height={20} />\r\n+                    </button>\r\n+                  </td>\r\n                 </td>\r\n-              </td>\r\n-                </div>\r\n+              </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1756714841376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <div className=\"\">\r\n+              <div className={styles.r}>\r\n                 <td>\r\n                   <button className={styles.btnedit}>\r\n                     <Image\r\n                       className={styles.edit}\r\n"
+                },
+                {
+                    "date": 1756714987161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <td className={styles.td1}>{p.name}</td>\r\n               <td className={styles.td2}>{p.quantity}</td>\r\n               <td className={styles.td3}>{p.price}</td>\r\n               <td className={styles.td4}>{p.id}</td>\r\n-              <div className={styles.r}>\r\n+              <div className={styles.flex1}>\r\n                 <td>\r\n                   <button className={styles.btnedit}>\r\n                     <Image\r\n                       className={styles.edit}\r\n@@ -92,8 +92,9 @@\n                   </button>\r\n                   <td>\r\n                     <button className={styles.btndel}>\r\n                       <Image src=\"/trash.png\" width={20} height={20} />\r\n+                      \r\n                     </button>\r\n                   </td>\r\n                 </td>\r\n               </div>\r\n"
+                },
+                {
+                    "date": 1756714997100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,10 +91,10 @@\n                     />\r\n                   </button>\r\n                   <td>\r\n                     <button className={styles.btndel}>\r\n-                      <Image src=\"/trash.png\" width={20} height={20} />\r\n                       \r\n+\r\n                     </button>\r\n                   </td>\r\n                 </td>\r\n               </div>\r\n"
+                },
+                {
+                    "date": 1756715003209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,8 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n+                    <Image src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   <td>\r\n                     <button className={styles.btndel}>\r\n                       \r\n"
+                },
+                {
+                    "date": 1756715018025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,13 +90,9 @@\n                       height={20}\r\n                     />\r\n                     <Image src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n-                  <td>\r\n-                    <button className={styles.btndel}>\r\n-                      \r\n-\r\n-                    </button>\r\n+                  \r\n                   </td>\r\n                 </td>\r\n               </div>\r\n             </tr>\r\n"
+                },
+                {
+                    "date": 1756715027845,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n                     <Image src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n-                </td>\r\n+                \r\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n"
+                },
+                {
+                    "date": 1756715087331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <Image src=\"/trash.png\" width={20} height={20} />\r\n+                    <Image cla src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n                 \r\n"
+                },
+                {
+                    "date": 1756715093958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <Image cla src=\"/trash.png\" width={20} height={20} />\r\n+                    <Image className={s} src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n                 \r\n"
+                },
+                {
+                    "date": 1756715100543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <Image className={s} src=\"/trash.png\" width={20} height={20} />\r\n+                    <Image className={styles.btndel} src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n                 \r\n"
+                },
+                {
+                    "date": 1756715236925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <Image className={styles.btndel} src=\"/trash.png\" width={20} height={20} />\r\n+                    <Image className= src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n                 \r\n"
+                },
+                {
+                    "date": 1756715255531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <Image className= src=\"/trash.png\" width={20} height={20} />\r\n+                    <Image  src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n                 \r\n"
+                },
+                {
+                    "date": 1756715262906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,8 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n+                    <b\r\n                     <Image  src=\"/trash.png\" width={20} height={20} />\r\n                   </button>\r\n                   \r\n                   </td>\r\n"
+                },
+                {
+                    "date": 1756715268875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,10 +88,12 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <b\r\n+                    <button>\r\n                     <Image  src=\"/trash.png\" width={20} height={20} />\r\n+\r\n+                    </button>\r\n                   </button>\r\n                   \r\n                   </td>\r\n                 \r\n"
+                },
+                {
+                    "date": 1756715275105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <button>\r\n+                    <button className=\"\">\r\n                     <Image  src=\"/trash.png\" width={20} height={20} />\r\n \r\n                     </button>\r\n                   </button>\r\n"
+                },
+                {
+                    "date": 1756715281043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,9 @@\n                       src=\"/edit.png\"\r\n                       width={20}\r\n                       height={20}\r\n                     />\r\n-                    <button className=\"\">\r\n+                    <button className={styles.btndel}>\r\n                     <Image  src=\"/trash.png\" width={20} height={20} />\r\n \r\n                     </button>\r\n                   </button>\r\n"
+                },
+                {
+                    "date": 1756724084333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,8 +100,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n+        <\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724095377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,9 +100,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <\r\n+        \r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724100646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n   useSearchProducts,\r\n } from \"@/hooks/queries\";\r\n import Image from \"next/image\";\r\n import styles from \"../styles/Dashboard.module.css\";\r\n+import AddProductModal from \"@/components/AddProductModal\";\r\n \r\n function Dashboard() {\r\n   const [search, setSearch] = useState(\"\");\r\n   const [isOpenModal, setIsOpenModal] = useState(false);\r\n@@ -100,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        \r\n+        <AddProductModal/>\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724116976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal/>\r\n+        <AddProductModal is />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724122622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal is />\r\n+        <AddProductModal isOpenModal={is} />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724129015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal isOpenModal={is} />\r\n+        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal() />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724271749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n           width={30}\r\n           height={30}\r\n         />\r\n         <h3 className={styles.title}>مدیرت کالا</h3>\r\n-        <button className={styles.addproduct}>افزودن محصول</button>\r\n+        <button  className={styles.addproduct}>افزودن محصول</button>\r\n       </div>\r\n       <div className={styles.createTable}>\r\n         <table className={styles.trr}>\r\n           <tbody>\r\n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal() />\r\n+        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724279168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n           width={30}\r\n           height={30}\r\n         />\r\n         <h3 className={styles.title}>مدیرت کالا</h3>\r\n-        <button  className={styles.addproduct}>افزودن محصول</button>\r\n+        <button onClick={()=>set} className={styles.addproduct}>افزودن محصول</button>\r\n       </div>\r\n       <div className={styles.createTable}>\r\n         <table className={styles.trr}>\r\n           <tbody>\r\n"
+                },
+                {
+                    "date": 1756724284398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,9 @@\n           width={30}\r\n           height={30}\r\n         />\r\n         <h3 className={styles.title}>مدیرت کالا</h3>\r\n-        <button onClick={()=>set} className={styles.addproduct}>افزودن محصول</button>\r\n+        <button onClick={()=>setIsOpenModal(true)} className={styles.addproduct}>افزودن محصول</button>\r\n       </div>\r\n       <div className={styles.createTable}>\r\n         <table className={styles.trr}>\r\n           <tbody>\r\n"
+                },
+                {
+                    "date": 1756724325499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} />\r\n+        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}  />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724331618,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal}  />\r\n+        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} form= />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724342829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} form= />\r\n+        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} form={form} setForm={setForm} />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724393562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,9 +61,14 @@\n           width={30}\r\n           height={30}\r\n         />\r\n         <h3 className={styles.title}>مدیرت کالا</h3>\r\n-        <button onClick={()=>setIsOpenModal(true)} className={styles.addproduct}>افزودن محصول</button>\r\n+        <button\r\n+          onClick={() => setIsOpenModal(true)}\r\n+          className={styles.addproduct}\r\n+        >\r\n+          افزودن محصول\r\n+        </button>\r\n       </div>\r\n       <div className={styles.createTable}>\r\n         <table className={styles.trr}>\r\n           <tbody>\r\n@@ -90,20 +95,23 @@\n                       width={20}\r\n                       height={20}\r\n                     />\r\n                     <button className={styles.btndel}>\r\n-                    <Image  src=\"/trash.png\" width={20} height={20} />\r\n-\r\n+                      <Image src=\"/trash.png\" width={20} height={20} />\r\n                     </button>\r\n                   </button>\r\n-                  \r\n-                  </td>\r\n-                \r\n+                </td>\r\n               </div>\r\n             </tr>\r\n           ))}\r\n         </table>\r\n-        <AddProductModal isOpenModal={isOpenModal} setIsOpenModal={setIsOpenModal} form={form} setForm={setForm} />\r\n+        <AddProductModal\r\n+          isOpenModal={isOpenModal}\r\n+          setIsOpenModal={setIsOpenModal}\r\n+          form={form}\r\n+          setForm={setForm}\r\n+          submitHandler={submitHandler}\r\n+        />\r\n       </div>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1756724667980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n \r\n   const { mutate } = useAddProducts();\r\n   const submitHandler = async (event) => {\r\n     event.preventDefault();\r\n+    \r\n \r\n     mutate({\r\n       name: form.name,\r\n       price: form.price,\r\n"
+                },
+                {
+                    "date": 1756724673204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n \r\n   const { mutate } = useAddProducts();\r\n   const submitHandler = async (event) => {\r\n     event.preventDefault();\r\n-    isOpenModal(tu)\r\n+    isOpenModal(t)\r\n \r\n     mutate({\r\n       name: form.name,\r\n       price: form.price,\r\n"
+                },
+                {
+                    "date": 1756799763928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,138 @@\n+import { useRouter } from \"next/router\";\r\n+import React, { useState } from \"react\";\r\n+import { useQuery } from \"@tanstack/react-query\";\r\n+import api from \"@/services/axios\";\r\n+import {\r\n+  useAddProducts,\r\n+  useDeleteProducts,\r\n+  useFetchProducts,\r\n+  usePageInationPage,\r\n+  useSearchProducts,\r\n+} from \"@/hooks/queries\";\r\n+import Image from \"next/image\";\r\n+import styles from \"../styles/Dashboard.module.css\";\r\n+import AddProductModal from \"@/components/AddProductModal\";\r\n+import Pageination from \"@/components/Pageination\";\r\n+import DeleteProductModal from \"@/components/DeleteProductModal\";\r\n+\r\n+function Dashboard() {\r\n+  const [search, setSearch] = useState(\"\");\r\n+  const [isOpenModal, setIsOpenModal] = useState(false);\r\n+  const [form, setForm] = useState({\r\n+    name: \"\",\r\n+    price: \"\",\r\n+    quantity: \"\",\r\n+  });\r\n+  const [page,setPage] = useState(1)\r\n+  const [isopenDelete, setIsopendelete] = useState(false)\r\n+\r\n+  const { data: products, isLoading: loading } = useSearchProducts(search);\r\n+  console.log({ products });\r\n+\r\n+  const { data, isLoading } = useFetchProducts();\r\n+  console.log({ data, isLoading });\r\n+\r\n+  const { mutate } = useAddProducts();\r\n+  const submitHandler = async (event) => {\r\n+    event.preventDefault();\r\n+    \r\n+    mutate({\r\n+      name: form.name,\r\n+      price: form.price,\r\n+      quantity: form.quantity,\r\n+    });\r\n+    setIsOpenModal(false)\r\n+  };\r\n+  const {data: page1} = usePageInationPage(page)\r\n+\r\n+  const {mutate: deleteProduct} = useDeleteProducts()\r\n+\r\n+  const submitDeleteHandler = async (event)=>{\r\n+    event.preventDefault()\r\n+    const {mutate: deleteProduct} = useDeleteProducts()\r\n+\r\n+\r\n+  }\r\n+\r\n+  return (\r\n+    <>\r\n+      <div>\r\n+        <input\r\n+          placeholder=\"جستجو کالا\"\r\n+          className={styles.search}\r\n+          type=\"text\"\r\n+          value={search}\r\n+          onChange={(e) => setSearch(e.target.value)}\r\n+        />\r\n+        <Image\r\n+          className={styles.icon_search}\r\n+          src=\"/search-normal (1).png\"\r\n+          width={24}\r\n+          height={24}\r\n+        />\r\n+      </div>\r\n+      <div className={styles.flex}>\r\n+        <Image\r\n+          className={styles.icon}\r\n+          src=\"/setting-3.png\"\r\n+          width={30}\r\n+          height={30}\r\n+        />\r\n+        <h3 className={styles.title}>مدیرت کالا</h3>\r\n+        <button\r\n+          onClick={() => setIsOpenModal(true)}\r\n+          className={styles.addproduct}\r\n+        >\r\n+          افزودن محصول\r\n+        </button>\r\n+      </div>\r\n+      <div className={styles.createTable}>\r\n+        <table className={styles.trr}>\r\n+          <tbody>\r\n+            <tr>\r\n+              <th className={styles.th1}>نام کالا</th>\r\n+              <th className={styles.th2}>موجودی</th>\r\n+              <th className={styles.th3}>قیمت</th>\r\n+              <th className={styles.th4}>شناسه کالا</th>\r\n+              <th></th>\r\n+            </tr>\r\n+          </tbody>\r\n+          {(search ? products?.data : page1?.data||data?.data)?.map((p) => (\r\n+            <tr className={styles.tr2}>\r\n+              <td className={styles.td1}>{p.name}</td>\r\n+              <td className={styles.td2}>{p.quantity}</td>\r\n+              <td className={styles.td3}>{p.price}</td>\r\n+              <td className={styles.td4}>{p.id}</td>\r\n+              <div className={styles.flex1}>\r\n+                <td>\r\n+                  <button className={styles.btnedit}>\r\n+                    <Image\r\n+                      className={styles.edit}\r\n+                      src=\"/edit.png\"\r\n+                      width={20}\r\n+                      height={20}\r\n+                    />\r\n+                    <button onClick={()=> deleteProduct(p.id)} className={styles.btndel}>\r\n+                      <Image src=\"/trash.png\" width={20} height={20} />\r\n+                    </button>\r\n+                  </button>\r\n+                </td>\r\n+              </div>\r\n+            </tr>\r\n+          ))}\r\n+        </table>\r\n+        <AddProductModal\r\n+          isOpenModal={isOpenModal}\r\n+          setIsOpenModal={setIsOpenModal}\r\n+          form={form}\r\n+          setForm={setForm}\r\n+          submitHandler={submitHandler}\r\n+        />\r\n+      </div>\r\n+      <Pageination page={page} setPage={setPage} />\r\n+      <DeleteProductModal isopenDelete={isopenDelete} setIsopendelete={setIsopendelete} />\r\n+    </>\r\n+  );\r\n+}\r\n+\r\n+export default Dashboard;\r\n"
                 }
             ],
             "date": 1756646098956,
